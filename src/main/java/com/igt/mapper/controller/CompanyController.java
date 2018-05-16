@@ -16,7 +16,6 @@ import java.util.Date;
 import java.util.List;
 
 @Controller
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @RequestMapping("/company")
 public class CompanyController {
     TransactionManager tm = com.arjuna.ats.jta.TransactionManager.transactionManager();
@@ -226,5 +225,12 @@ public class CompanyController {
         }
 
         return allCompanys;
+    }
+
+    @RequestMapping(value="/db", method = RequestMethod.GET)
+    public @ResponseBody
+    void changeDB(@RequestParam(value = "type") String type){
+        emf = Persistence.createEntityManagerFactory(type);
+
     }
 }
