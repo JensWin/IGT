@@ -2,6 +2,7 @@ package com.igt.mapper.controller;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.igt.mapper.Config;
+import com.igt.mapper.DatabaseController;
 import com.igt.mapper.model.Company;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -18,12 +19,13 @@ import java.util.List;
 @Controller
 @RequestMapping("/company")
 public class CompanyController {
-    TransactionManager tm = com.arjuna.ats.jta.TransactionManager.transactionManager();
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory(Config.PERSISTENCE_UNIT_NAME);
+
 
 
     @RequestMapping(value="/update", method = RequestMethod.PUT)
     public void updateCompany(Company c) {
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
 
         try {
             EntityManager em = emf.createEntityManager();
@@ -56,8 +58,9 @@ public class CompanyController {
 
     @RequestMapping(value="/get/{id}", method = RequestMethod.GET)
     public @ResponseBody
-    Company getCompany(@PathVariable(value = "id", required = true) int id) {
-
+    Company getCompany(@PathVariable(value = "id", required = true) String id) {
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
         Company comp = null;
 
         try {
@@ -86,14 +89,36 @@ public class CompanyController {
     @RequestMapping(value = "/create", method = RequestMethod.GET)
     public @ResponseBody
     void createCompany(@RequestParam(value ="name", required = true) String name) {
-
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
         Company company1 = new Company();
 
-        company1.setC_ID(1);
-        company1.setC_NAME("Test");
+        company1.setC_NAME(name);
 
         try {
             EntityManager em = emf.createEntityManager();
+            /*String queryString = new String("SELECT C_ID from Company");
+            tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
+            tm.begin();
+
+            Query q = em.createQuery(queryString);
+            List<String> list = q.getResultList();
+
+            int max=0;
+
+            System.out.println(list.toString());
+            for(String i : list){
+                if(max<Integer.parseInt(i))max=Integer.parseInt(i);
+
+            }
+
+            company1.setC_ID(""+ ++max);
+
+            em.flush();
+            em.close();
+            tm.commit();
+*/
+
             tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
             tm.begin();
 
@@ -102,6 +127,7 @@ public class CompanyController {
             em.flush();
             em.close();
             tm.commit();
+
         } catch (NotSupportedException e) {
             e.printStackTrace();
         } catch (SystemException e) {
@@ -114,12 +140,14 @@ public class CompanyController {
             e.printStackTrace();
         }
 
+
     }
 
     @RequestMapping(value="/delete", method = RequestMethod.GET)
     public @ResponseBody
-    void deleteCompany(@RequestParam(value = "id") int id){
-
+    void deleteCompany(@RequestParam(value = "id") String id){
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
         try {
             EntityManager em = emf.createEntityManager();
             tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
@@ -150,10 +178,11 @@ public class CompanyController {
 
     @RequestMapping(value="/getAllIds", method = RequestMethod.GET)
     public @ResponseBody
-    List<Integer> getCompanyIds(){
-
+    List<String> getCompanyIds(){
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
         List<Company> allCompanys = new ArrayList<Company>();
-        List<Integer> companyIdz = new ArrayList<Integer>();
+        List<String> companyIdz = new ArrayList<String>();
 
         try {
             EntityManager em = emf.createEntityManager();
@@ -193,9 +222,10 @@ public class CompanyController {
     @RequestMapping(value="/getAll", method = RequestMethod.GET)
     public @ResponseBody
     List<Company> getCompanys(){
-
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
         List<Company> allCompanys = new ArrayList<Company>();
-        List<Integer> companyIdz = new ArrayList<Integer>();
+
 
         try {
             EntityManager em = emf.createEntityManager();
@@ -227,10 +257,4 @@ public class CompanyController {
         return allCompanys;
     }
 
-    @RequestMapping(value="/db", method = RequestMethod.GET)
-    public @ResponseBody
-    void changeDB(@RequestParam(value = "type") String type){
-        emf = Persistence.createEntityManagerFactory(type);
-
-    }
 }

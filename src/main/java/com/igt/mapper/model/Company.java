@@ -1,20 +1,26 @@
 package com.igt.mapper.model;
 
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.id.IdentifierGenerator;
 import org.hibernate.search.annotations.Indexed;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.annotation.Generated;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+
 
 @Entity
 @Indexed
 @Table(name = "COMPANY")
 public class Company  implements Serializable{
+
     @Id
-    private Integer C_ID;
+    @GeneratedValue(generator="uuid")
+    @GenericGenerator(name="uuid", strategy = "uuid2")
+    @Column(name="C_ID", updatable = false, nullable = false)
+    private String C_ID;
+
     @Column
     private String C_NAME;
 
@@ -22,11 +28,11 @@ public class Company  implements Serializable{
     {
     }
 
-    public Integer getC_ID() {
+    public String getC_ID() {
         return C_ID;
     }
 
-    public void setC_ID(Integer c_ID) {
+    public void setC_ID(String c_ID) {
         C_ID = c_ID;
     }
 
