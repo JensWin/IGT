@@ -88,7 +88,6 @@ public class DistrictController {
 
         District district1 = new District();
 
-        district1.setC_ID(1);
         district1.setC_NAME("Test");
 
         try {

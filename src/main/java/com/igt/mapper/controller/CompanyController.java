@@ -21,7 +21,6 @@ import java.util.List;
 public class CompanyController {
 
 
-
     @RequestMapping(value="/update", method = RequestMethod.PUT)
     public void updateCompany(Company c) {
         EntityManagerFactory emf = DatabaseController.emf;
@@ -96,34 +95,11 @@ public class CompanyController {
         company1.setC_NAME(name);
 
         try {
+
             EntityManager em = emf.createEntityManager();
-            /*String queryString = new String("SELECT C_ID from Company");
             tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
             tm.begin();
-
-            Query q = em.createQuery(queryString);
-            List<String> list = q.getResultList();
-
-            int max=0;
-
-            System.out.println(list.toString());
-            for(String i : list){
-                if(max<Integer.parseInt(i))max=Integer.parseInt(i);
-
-            }
-
-            company1.setC_ID(""+ ++max);
-
-            em.flush();
-            em.close();
-            tm.commit();
-*/
-
-            tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
-            tm.begin();
-
             em.persist(company1);
-
             em.flush();
             em.close();
             tm.commit();
