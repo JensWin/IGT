@@ -1,8 +1,10 @@
 package com.igt.mapper.controller;
 
 import com.igt.mapper.Config;
+import com.igt.mapper.DatabaseController;
 import com.igt.mapper.model.Company;
 import com.igt.mapper.model.District;
+import com.igt.mapper.model.Warehouse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -84,18 +86,23 @@ public class DistrictController {
 
     @RequestMapping(value = "/create", method = RequestMethod.GET)
     public @ResponseBody
-    void createDistrict(@RequestParam(value ="name", required = true) String name) {
+    void createDistrict(@RequestParam(value ="name", required = true) String name,
+                         @RequestParam(value ="warehouse", required = true) String Warehouse_ID) {
 
-        District district1 = new District();
+        District District = new District();
 
-        district1.setC_NAME("Test");
+
+        District.setC_NAME(name);
 
         try {
             EntityManager em = emf.createEntityManager();
             tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
             tm.begin();
 
-            em.persist(district1);
+            Warehouse c = em.find(Warehouse.class,Warehouse_ID);
+            District.setC_WAREHOUSE(c);
+            System.out.println(c);
+            em.persist(District);
 
             em.flush();
             em.close();
@@ -145,33 +152,28 @@ public class DistrictController {
 
     }
 
-    @RequestMapping(value="/db", method = RequestMethod.GET)
-    public @ResponseBody
-    void changeDB(@RequestParam(value = "type") String type){
-        emf = Persistence.createEntityManagerFactory(type);
 
-    }
-    /*
     @RequestMapping(value="/getAllIds", method = RequestMethod.GET)
     public @ResponseBody
-    List<Integer> getDistrictIds(){
-
-        List<Company> allCompanys = new ArrayList<Company>();
-        List<Integer> companyIdz = new ArrayList<Integer>();
+    List<String> getDistrictIds(){
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
+        List<District> all = new ArrayList<District>();
+        List<String> Ids = new ArrayList<String>();
 
         try {
             EntityManager em = emf.createEntityManager();
 
-            String queryString = new String("SELECT c FROM Company c");
+            String queryString = new String("SELECT c FROM District c");
 
             tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
             tm.begin();
 
             Query q = em.createQuery(queryString);
-            allCompanys = q.getResultList();
+            all = q.getResultList();
 
-            for(Company c : allCompanys){
-                companyIdz.add(c.getC_ID());
+            for(District c : all){
+                Ids.add(c.getC_ID());
             }
 
             em.flush();
@@ -191,26 +193,27 @@ public class DistrictController {
             e.printStackTrace();
         }
 
-        return companyIdz;
+        return Ids;
     }
 
     @RequestMapping(value="/getAll", method = RequestMethod.GET)
     public @ResponseBody
-    List<Company> getDistricts(){
+    List<District> getDistrict(){
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
+        List<District> all = new ArrayList<District>();
 
-        List<Company> allCompanys = new ArrayList<Company>();
-        List<Integer> companyIdz = new ArrayList<Integer>();
 
         try {
             EntityManager em = emf.createEntityManager();
 
-            String queryString = new String("SELECT c FROM Company c");
+            String queryString = new String("SELECT c FROM District c");
 
             tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
             tm.begin();
 
             Query q = em.createQuery(queryString);
-            allCompanys = q.getResultList();
+            all = q.getResultList();
 
             em.flush();
             em.close();
@@ -228,8 +231,6 @@ public class DistrictController {
             e.printStackTrace();
         }
 
-        return allCompanys;
+        return all;
     }
-
-    */
 }

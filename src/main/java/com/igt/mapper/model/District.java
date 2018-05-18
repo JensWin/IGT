@@ -34,7 +34,13 @@ public class District implements Serializable {
     }
 
     @ManyToOne
-    private Warehouse warehouse;
+    private Warehouse C_WAREHOUSE;
+    public Warehouse getC_WAREHOUSE() {
+        return C_WAREHOUSE;
+    }
+    public void setC_WAREHOUSE(Warehouse C_WAREHOUSE) {
+        this.C_WAREHOUSE = C_WAREHOUSE;
+    }
 
 
     public District(){ }
