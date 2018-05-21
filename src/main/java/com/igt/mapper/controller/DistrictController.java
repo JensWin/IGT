@@ -3,6 +3,7 @@ package com.igt.mapper.controller;
 import com.igt.mapper.Config;
 import com.igt.mapper.DatabaseController;
 import com.igt.mapper.model.Company;
+import com.igt.mapper.model.Customer;
 import com.igt.mapper.model.District;
 import com.igt.mapper.model.Warehouse;
 import org.springframework.stereotype.Controller;
@@ -19,22 +20,25 @@ import java.util.List;
 @Controller
 @RequestMapping("/district")
 public class DistrictController {
-    TransactionManager tm = com.arjuna.ats.jta.TransactionManager.transactionManager();
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory(Config.PERSISTENCE_UNIT_NAME);
 
 
-    @RequestMapping(value="/update", method = RequestMethod.PUT)
-    public void updateDistrict(District c) {
+    @RequestMapping(value="/update", method = RequestMethod.GET)
+    public void updateDistrict(@RequestParam(value ="name", required = false) String name,
+                               @RequestParam(value ="warehouse", required = false) String Warehouse_ID,
+                               @RequestParam(value ="id", required = true) String id) {
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
 
         try {
+            District ToUpdate = getDistrict(id);
+
+            if(name!=null) ToUpdate.setC_NAME(name);
+
             EntityManager em = emf.createEntityManager();
-            tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
             tm.begin();
-
-            District districtToUpdate = em.find(District.class, c.getC_ID());
-            districtToUpdate = c;
-
-            em.merge(c);
+            if(Warehouse_ID!=null)
+                ToUpdate.setC_WAREHOUSE(em.find(Warehouse.class, Warehouse_ID));
+            em.merge(ToUpdate);
 
             em.flush();
             em.close();
@@ -57,8 +61,9 @@ public class DistrictController {
 
     @RequestMapping(value="/get/{id}", method = RequestMethod.GET)
     public @ResponseBody
-    District getDistrict(@PathVariable(value = "id", required = true) int id) {
-
+    District getDistrict(@PathVariable(value = "id", required = true) String id) {
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
         District dist = null;
 
         try {
@@ -88,7 +93,8 @@ public class DistrictController {
     public @ResponseBody
     void createDistrict(@RequestParam(value ="name", required = true) String name,
                          @RequestParam(value ="warehouse", required = true) String Warehouse_ID) {
-
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
         District District = new District();
 
 
@@ -123,8 +129,9 @@ public class DistrictController {
 
     @RequestMapping(value="/delete", method = RequestMethod.GET)
     public @ResponseBody
-    void deleteDistrict(@RequestParam(value = "id") int id){
-
+    void deleteDistrict(@RequestParam(value = "id") String id){
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
         try {
             EntityManager em = emf.createEntityManager();
             tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);

@@ -20,22 +20,24 @@ import java.util.List;
 @Controller
 @RequestMapping("/orderLine")
 public class OrderLineController {
-    TransactionManager tm = com.arjuna.ats.jta.TransactionManager.transactionManager();
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory(Config.PERSISTENCE_UNIT_NAME);
 
 
-    @RequestMapping(value="/update", method = RequestMethod.PUT)
-    public void updateOrderLine(OrderLine c) {
 
+    @RequestMapping(value="/update", method = RequestMethod.GET)
+    public void updateOrderLine(@RequestParam(value ="order", required = false) String Order_ID,
+                                @RequestParam(value ="item", required = false) String Item_ID,
+                                @RequestParam(value ="id", required = true) String id) {
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
         try {
+
+            OrderLine ToUpdate = getOrderLine(id);
+
             EntityManager em = emf.createEntityManager();
-            tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
             tm.begin();
-
-            OrderLine orderLineToUpdate = em.find(OrderLine.class, c.getC_ID());
-            orderLineToUpdate = c;
-
-            em.merge(c);
+            if(Order_ID!=null) ToUpdate.setC_ORDER(em.find(Order.class, Order_ID));
+            if(Item_ID!=null) ToUpdate.setC_ITEM(em.find(Item.class, Item_ID));
+            em.merge(ToUpdate);
 
             em.flush();
             em.close();
@@ -58,8 +60,9 @@ public class OrderLineController {
 
     @RequestMapping(value="/get/{id}", method = RequestMethod.GET)
     public @ResponseBody
-    OrderLine getOrderLine(@PathVariable(value = "id", required = true) int id) {
-
+    OrderLine getOrderLine(@PathVariable(value = "id", required = true) String id) {
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
         OrderLine orderLine = null;
 
         try {
@@ -89,7 +92,8 @@ public class OrderLineController {
     public @ResponseBody
     void createOrderLine(@RequestParam(value ="order", required = true) String Order_ID,
                          @RequestParam(value ="item", required = true) String Item_ID) {
-
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
         OrderLine orderline = new OrderLine();
 
 
@@ -125,8 +129,9 @@ public class OrderLineController {
 
     @RequestMapping(value="/delete", method = RequestMethod.GET)
     public @ResponseBody
-    void deleteOrderLine(@RequestParam(value = "id") int id){
-
+    void deleteOrderLine(@RequestParam(value = "id") String id){
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
         try {
             EntityManager em = emf.createEntityManager();
             tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);

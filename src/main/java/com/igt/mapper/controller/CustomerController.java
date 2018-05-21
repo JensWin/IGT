@@ -7,6 +7,7 @@ import javax.persistence.Persistence;
 import javax.persistence.Query;
 import javax.transaction.*;
 import com.igt.mapper.Config;
+import com.igt.mapper.DatabaseController;
 import com.igt.mapper.model.Customer;
 import com.igt.mapper.model.District;
 import org.springframework.stereotype.Controller;
@@ -26,22 +27,26 @@ import static java.nio.file.StandardOpenOption.CREATE;
 @RequestMapping("/customer")
 public class CustomerController {
 
-    TransactionManager tm = com.arjuna.ats.jta.TransactionManager.transactionManager();
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory(Config.PERSISTENCE_UNIT_NAME);
-
-
-    @RequestMapping(value="/update", method = RequestMethod.PUT)
-    public void updateCustomer(Customer c) {
+    @RequestMapping(value="/update", method = RequestMethod.GET)
+    public void updateCustomer(@RequestParam(value ="name", required = false) String name,
+                               @RequestParam(value ="pw", required = false) String pw,
+                               @RequestParam(value ="district", required = false) String District_ID,
+                               @RequestParam(value ="id", required = true) String id) {
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
 
         try {
+
+            Customer ToUpdate = getCustomer(id);
+
+            if(name!=null) ToUpdate.setC_NAME(name);
+            if(pw!=null) ToUpdate.setC_PASSWD(pw);
+
             EntityManager em = emf.createEntityManager();
-            tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
             tm.begin();
-
-            Customer customerToUpdate = em.find(Customer.class, c.getC_ID());
-            customerToUpdate = c;
-
-            em.merge(c);
+            if(District_ID!=null)
+                ToUpdate.setC_DISTRICT(em.find(District.class, District_ID));
+            em.merge(ToUpdate);
 
             em.flush();
             em.close();
@@ -64,8 +69,9 @@ public class CustomerController {
 
     @RequestMapping(value="/get/{id}", method = RequestMethod.GET)
     public @ResponseBody
-    Customer getCustomer(@PathVariable(value = "id", required = true) int id) {
-
+    Customer getCustomer(@PathVariable(value = "id", required = true) String id) {
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
 
         Customer cust = null;
 
@@ -100,30 +106,16 @@ public class CustomerController {
     @RequestMapping(value = "/create", method = RequestMethod.GET)
     public @ResponseBody
     void createCustomers(@RequestParam(value ="name", required = true) String name,
+                         @RequestParam(value ="pw", required = true) String pw,
                          @RequestParam(value ="district", required = true) String District_ID){
-
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
 
 
         Customer customer1 = new Customer();
 
-        customer1.setC_ADDR_ID(2);
-        customer1.setC_BALANCE(99.9);
-        customer1.setC_BIRTHDATE(new Date());
-        customer1.setC_DATA("data_1");
-        customer1.setC_DISCOUNT(99.9);
-        customer1.setC_EMAIL("email_1");
-        customer1.setC_EXPIRATION(new Date());
-        customer1.setC_FNAME(name);
-        customer1.setC_LAST_LOGIN(new Date());
-        customer1.setC_LOGIN(new Date());
-        customer1.setC_PASSWD("password_1");
-        customer1.setC_LNAME("lname_1");
-        customer1.setC_PHONE("phone_1");
-        customer1.setC_SINCE(new Date());
-        customer1.setC_YTD_PMT(99.9);
-        customer1.setC_UNAME("uname_1");
-
-
+        customer1.setC_NAME(name);
+        customer1.setC_PASSWD(pw);
 
         try {
             EntityManager em = emf.createEntityManager();
@@ -156,8 +148,9 @@ public class CustomerController {
 
     @RequestMapping(value="/delete", method = RequestMethod.GET)
     public @ResponseBody
-    void deleteCustomer(@RequestParam(value = "id") int id){
-
+    void deleteCustomer(@RequestParam(value = "id") String id){
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
         try {
             EntityManager em = emf.createEntityManager();
             tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
@@ -189,7 +182,8 @@ public class CustomerController {
     @RequestMapping(value="/getAllIds", method = RequestMethod.GET)
     public @ResponseBody
     List<String> getCustomerIds(){
-
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
         List<Customer> allCustomers = new ArrayList<Customer>();
         List<String> customerIdz = new ArrayList<String>();
 
@@ -231,7 +225,8 @@ public class CustomerController {
     @RequestMapping(value="/getAll", method = RequestMethod.GET)
     public @ResponseBody
     List<Customer> getCustomers(){
-
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
         List<Customer> allCustomers = new ArrayList<Customer>();
         List<Integer> customerIdz = new ArrayList<Integer>();
 

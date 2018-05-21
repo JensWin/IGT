@@ -1,19 +1,10 @@
 package com.igt.mapper.controller;
 
-import com.mongodb.util.JSON;
 import org.apache.commons.io.IOUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
-
 import static org.junit.Assert.*;
-
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.Reader;
 import java.io.StringWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -269,8 +260,10 @@ public class CompanyControllerTest{
                 if (conn.getResponseCode() != 200) {
                     throw new RuntimeException("Failed : HTTP error code : "
                             + conn.getResponseCode());
+
                 }
             }catch(Exception e){
+                loop=false;
                 e.printStackTrace();
             }
         }

@@ -9,7 +9,7 @@ import java.util.Date;
 
 @Entity
 @Indexed
-@Table(name = "Order")
+@Table(name = "ORDERINO")
 public class Order implements Serializable {
     @Id
     @GeneratedValue(generator="uuid")
@@ -41,6 +41,7 @@ public class Order implements Serializable {
     }
 
     @ManyToOne
+    @JoinColumn(name="C_ID")
     private Customer C_CUSTOMER;
     public Customer getC_CUSTOMER() {
         return C_CUSTOMER;

@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 @Entity
 @Indexed
-@Table(name = "NewOrder")
+@Table(name = "NEWORDER")
 public class NewOrder implements Serializable{
 
     @Id
@@ -26,6 +26,7 @@ public class NewOrder implements Serializable{
 
 
     @ManyToOne
+    @JoinColumn(name="C_ID")
     private Order C_ORDER;
     public Order getC_ORDER() {
         return C_ORDER;

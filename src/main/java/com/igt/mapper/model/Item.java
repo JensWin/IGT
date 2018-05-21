@@ -32,15 +32,16 @@ public class Item implements Serializable {
         C_NAME = c_UNAME;
     }
 
-    private int C_Stock;
-    public int getC_Stock() {
-        return C_Stock;
+    private int C_STOCK;
+    public int getC_STOCK() {
+        return C_STOCK;
     }
-    public void setC_Stock(int C_Stock) {
-        this.C_Stock = C_Stock;
+    public void setC_STOCK(int C_STOCK) {
+        this.C_STOCK = C_STOCK;
     }
 
     @ManyToOne
+    @JoinColumn(name="C_ID")
     private Warehouse C_WAREHOUSE;
     public Warehouse getC_WAREHOUSE() {
         return C_WAREHOUSE;

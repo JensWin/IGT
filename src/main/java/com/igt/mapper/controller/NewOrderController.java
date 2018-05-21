@@ -21,20 +21,20 @@ import java.util.List;
 public class NewOrderController {
 
 
-    @RequestMapping(value="/update", method = RequestMethod.PUT)
-    public void updateNewOrder(NewOrder c) {
+    @RequestMapping(value="/update", method = RequestMethod.GET)
+    public void updateNewOrder(@RequestParam(value = "order", required = true) String order_id,
+                               @RequestParam(value = "id", required = true) String id) {
         EntityManagerFactory emf = DatabaseController.emf;
         TransactionManager tm = DatabaseController.tm;
 
         try {
+            NewOrder ToUpdate = getNewOrder(id);
+
             EntityManager em = emf.createEntityManager();
-            tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
             tm.begin();
-
-            NewOrder NewOrderToUpdate = em.find(NewOrder.class, c.getC_ID());
-            NewOrderToUpdate = c;
-
-            em.merge(c);
+            Order c = em.find(Order.class,order_id);
+            ToUpdate.setC_ORDER(c);
+            em.merge(ToUpdate);
 
             em.flush();
             em.close();

@@ -17,22 +17,29 @@ import java.util.List;
 @Controller
 @RequestMapping("/item")
 public class ItemController {
-    TransactionManager tm = com.arjuna.ats.jta.TransactionManager.transactionManager();
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory(Config.PERSISTENCE_UNIT_NAME);
 
 
-    @RequestMapping(value="/update", method = RequestMethod.PUT)
-    public void updateItem(Item c) {
-
+    @RequestMapping(value="/update", method = RequestMethod.GET)
+    public void updateItem(@RequestParam(value ="name", required = false) String name,
+                           @RequestParam(value ="warehouse", required = false) String Warehouse_ID,
+                           @RequestParam(value ="stock", required = true) String stock,
+                           @RequestParam(value ="id", required = true) String id) {
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
         try {
+            Item ToUpdate = getItem(id);
+
+            if(name!=null) ToUpdate.setC_NAME(name);
+            if(stock!=null) {
+                ToUpdate.setC_STOCK(Integer.parseInt(stock));
+            }else{
+                ToUpdate.setC_STOCK(0);
+            }
             EntityManager em = emf.createEntityManager();
-            tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
             tm.begin();
-
-            Item itemToUpdate = em.find(Item.class, c.getC_ID());
-            itemToUpdate = c;
-
-            em.merge(c);
+            if(Warehouse_ID!=null)
+                ToUpdate.setC_WAREHOUSE(em.find(Warehouse.class, Warehouse_ID));
+            em.merge(ToUpdate);
 
             em.flush();
             em.close();
@@ -55,8 +62,9 @@ public class ItemController {
 
     @RequestMapping(value="/get/{id}", method = RequestMethod.GET)
     public @ResponseBody
-    Item getItem(@PathVariable(value = "id", required = true) int id) {
-
+    Item getItem(@PathVariable(value = "id", required = true) String id) {
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
         Item item = null;
 
         try {
@@ -85,12 +93,15 @@ public class ItemController {
     @RequestMapping(value = "/create", method = RequestMethod.GET)
     public @ResponseBody
     void createItem(@RequestParam(value ="name", required = true) String name,
-                        @RequestParam(value ="warehouse", required = true) String Warehouse_ID) {
-
+                    @RequestParam(value ="warehouse", required = true) String Warehouse_ID,
+                    @RequestParam(value ="stock", required = true) String stock) {
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
         Item item = new Item();
 
 
         item.setC_NAME(name);
+        item.setC_STOCK(Integer.parseInt(stock));
 
         try {
             EntityManager em = emf.createEntityManager();
@@ -121,8 +132,9 @@ public class ItemController {
 
     @RequestMapping(value="/delete", method = RequestMethod.GET)
     public @ResponseBody
-    void deleteItem(@RequestParam(value = "id") int id){
-
+    void deleteItem(@RequestParam(value = "id") String id){
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
         try {
             EntityManager em = emf.createEntityManager();
             tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);

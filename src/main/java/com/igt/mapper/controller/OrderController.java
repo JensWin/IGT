@@ -3,17 +3,16 @@ package com.igt.mapper.controller;
 import com.igt.mapper.Config;
 import com.igt.mapper.DatabaseController;
 import com.igt.mapper.model.Customer;
-import com.igt.mapper.model.District;
-import com.igt.mapper.model.Order;
+import com.igt.mapper.model.District;import com.igt.mapper.model.Order;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+
 import javax.persistence.Query;
 import javax.transaction.*;
-import java.time.LocalDateTime;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -21,22 +20,25 @@ import java.util.List;
 @Controller
 @RequestMapping("/order")
 public class OrderController {
-    TransactionManager tm = com.arjuna.ats.jta.TransactionManager.transactionManager();
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory(Config.PERSISTENCE_UNIT_NAME);
 
 
-    @RequestMapping(value="/update", method = RequestMethod.PUT)
-    public void updateOrder(Order c) {
 
+    @RequestMapping(value="/update", method = RequestMethod.GET)
+    public void updateOrder(@RequestParam(value ="name", required = false) String name,
+                            @RequestParam(value ="customer", required = false) String Customer_ID,
+                            @RequestParam(value ="id", required = true) String id) {
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
         try {
+            Order ToUpdate = getOrder(id);
+
+            if(name!=null) ToUpdate.setC_NAME(name);
+
             EntityManager em = emf.createEntityManager();
-            tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
             tm.begin();
-
-            Order orderToUpdate = em.find(Order.class, c.getC_ID());
-            orderToUpdate = c;
-
-            em.merge(c);
+            if(Customer_ID!=null)
+                ToUpdate.setC_CUSTOMER(em.find(Customer.class, Customer_ID));
+            em.merge(ToUpdate);
 
             em.flush();
             em.close();
@@ -59,8 +61,9 @@ public class OrderController {
 
     @RequestMapping(value="/get/{id}", method = RequestMethod.GET)
     public @ResponseBody
-    Order getOrder(@PathVariable(value = "id", required = true) int id) {
-
+    Order getOrder(@PathVariable(value = "id", required = true) String id) {
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
         Order order = null;
 
         try {
@@ -89,8 +92,11 @@ public class OrderController {
     @RequestMapping(value = "/create", method = RequestMethod.GET)
     public @ResponseBody
     void createCustomer(@RequestParam(value ="name", required = true) String name,
-                        @RequestParam(value ="customer", required = true) String Customer_ID) {
-
+                        @RequestParam(value ="customer", required = true) String Customer_ID
+                       // ,@RequestParam(value ="date", required = false) Date date
+    ) {
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
         Order order = new Order();
 
 
@@ -126,8 +132,9 @@ public class OrderController {
 
     @RequestMapping(value="/delete", method = RequestMethod.GET)
     public @ResponseBody
-    void deleteOrder(@RequestParam(value = "id") int id){
-
+    void deleteOrder(@RequestParam(value = "id") String id){
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
         try {
             EntityManager em = emf.createEntityManager();
             tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);

@@ -19,27 +19,31 @@ import java.util.List;
 @Controller
 @RequestMapping("/warehouse")
 public class WarehouseController {
-    TransactionManager tm = com.arjuna.ats.jta.TransactionManager.transactionManager();
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory(Config.PERSISTENCE_UNIT_NAME);
 
 
-    @RequestMapping(value="/update", method = RequestMethod.PUT)
-    public void updateWarehouse(Warehouse c) {
+
+    @RequestMapping(value="/update", method = RequestMethod.GET)
+    public void updateWarehouse(@RequestParam(value ="name", required = false) String name,
+                                @RequestParam(value ="id", required = true) String id,
+                                @RequestParam(value ="company", required = false) String company) {
+
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
 
         try {
+            Warehouse warehouseToUpdate = getWarehouse(id);
+            if(name!=null)
+                warehouseToUpdate.setC_NAME(name);
+
             EntityManager em = emf.createEntityManager();
-            tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
             tm.begin();
-
-            Warehouse warehouseToUpdate = em.find(Warehouse.class, c.getC_ID());
-            warehouseToUpdate = c;
-
-            em.merge(c);
+            if(company!=null)
+                warehouseToUpdate.setC_COMPANY(em.find(Company.class, company));
+            em.merge(warehouseToUpdate);
 
             em.flush();
             em.close();
             tm.commit();
-
 
         } catch (NotSupportedException e) {
             e.printStackTrace();
@@ -57,7 +61,10 @@ public class WarehouseController {
 
     @RequestMapping(value="/get/{id}", method = RequestMethod.GET)
     public @ResponseBody
-    Warehouse getWarehouse(@PathVariable(value = "id", required = true) int id) {
+    Warehouse getWarehouse(@PathVariable(value = "id", required = true) String id) {
+
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
 
         Warehouse warehouse = null;
 
@@ -88,6 +95,8 @@ public class WarehouseController {
     public @ResponseBody
     void createWarehouse(@RequestParam(value ="name", required = true) String name,
                          @RequestParam(value ="company", required = true) String Company_ID) {
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
 
         Warehouse warehouse = new Warehouse();
 
@@ -98,12 +107,9 @@ public class WarehouseController {
             EntityManager em = emf.createEntityManager();
             tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
             tm.begin();
-
             Company c = em.find(Company.class,Company_ID);
             warehouse.setC_COMPANY(c);
-            System.out.println(c);
             em.persist(warehouse);
-
             em.flush();
             em.close();
             tm.commit();
@@ -123,7 +129,10 @@ public class WarehouseController {
 
     @RequestMapping(value="/delete", method = RequestMethod.GET)
     public @ResponseBody
-    void deleteWarehouse(@RequestParam(value = "id") int id){
+    void deleteWarehouse(@RequestParam(value = "id") String id){
+
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
 
         try {
             EntityManager em = emf.createEntityManager();
@@ -197,7 +206,7 @@ public class WarehouseController {
 
     @RequestMapping(value="/getAll", method = RequestMethod.GET)
     public @ResponseBody
-    List<Warehouse> getWarehouse(){
+    List<Warehouse> getWarehouses(){
         EntityManagerFactory emf = DatabaseController.emf;
         TransactionManager tm = DatabaseController.tm;
         List<Warehouse> all = new ArrayList<Warehouse>();

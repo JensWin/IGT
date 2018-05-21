@@ -34,6 +34,7 @@ public class District implements Serializable {
     }
 
     @ManyToOne
+    @JoinColumn(name="C_ID")
     private Warehouse C_WAREHOUSE;
     public Warehouse getC_WAREHOUSE() {
         return C_WAREHOUSE;

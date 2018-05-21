@@ -34,6 +34,7 @@ public class Warehouse implements Serializable {
     }
 
     @ManyToOne
+    @JoinColumn(name="C_ID")
     private Company C_COMPANY;
     public Company getC_COMPANY() {
         return C_COMPANY;

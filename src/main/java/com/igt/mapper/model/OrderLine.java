@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 @Entity
 @Indexed
-@Table(name = "OrderLine")
+@Table(name = "ORDERLINE")
 public class OrderLine implements Serializable {
     @Id
     @GeneratedValue(generator="uuid")
@@ -24,6 +24,7 @@ public class OrderLine implements Serializable {
     }
 
     @ManyToOne
+    @JoinColumn(name="C_ID")
     private  Order C_ORDER;
     public Order getC_ORDER() {
         return C_ORDER;
@@ -33,6 +34,7 @@ public class OrderLine implements Serializable {
     }
 
     @ManyToOne
+    @JoinColumn(name="C_ID")
     private Item C_ITEM;
     public Item getC_ITEM() {
         return C_ITEM;
