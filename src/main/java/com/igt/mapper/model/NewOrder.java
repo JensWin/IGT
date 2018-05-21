@@ -1,19 +1,16 @@
 package com.igt.mapper.model;
 
 import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.id.IdentifierGenerator;
 import org.hibernate.search.annotations.Indexed;
 
-import javax.annotation.Generated;
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Date;
 
 
 @Entity
 @Indexed
-@Table(name = "COMPANY")
-public class Company  implements Serializable{
+@Table(name = "NewOrder")
+public class NewOrder implements Serializable{
 
     @Id
     @GeneratedValue(generator="uuid")
@@ -28,17 +25,17 @@ public class Company  implements Serializable{
     }
 
 
-    @Column
-    private String C_NAME;
-    public String getC_NAME() {
-        return C_NAME;
+    @ManyToOne
+    private Order C_ORDER;
+    public Order getC_ORDER() {
+        return C_ORDER;
     }
-    public void setC_NAME(String c_NAME) {
-        C_NAME = c_NAME;
+    public void setC_ORDER(Order C_ORDER) {
+        this.C_ORDER = C_ORDER;
     }
 
 
-    public Company()
+    public NewOrder()
     {
     }
 

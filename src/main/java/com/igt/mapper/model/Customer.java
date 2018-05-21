@@ -1,11 +1,9 @@
 package com.igt.mapper.model;
 
+import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.search.annotations.Indexed;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -14,7 +12,17 @@ import java.util.Date;
 @Table(name = "CUSTOMER")
 public class Customer implements Serializable {
     @Id
-    private Integer C_ID;
+    @GeneratedValue(generator="uuid")
+    @GenericGenerator(name="uuid", strategy = "uuid2")
+    @Column(name="C_ID", updatable = false, nullable = false)
+    private String C_ID;
+    public String getC_ID() {
+        return C_ID;
+    }
+    public void setC_ID(String c_ID) {
+        C_ID = c_ID;
+    }
+
     @Column
     private String C_UNAME;
     @Column
@@ -49,6 +57,16 @@ public class Customer implements Serializable {
     private Date C_EXPIRATION;
 
 
+    @ManyToOne
+    private District C_DISTRICT;
+    public District getC_DISTRICT() {
+        return C_DISTRICT;
+    }
+    public void setC_DISTRICT(District C_DISTRICT) {
+        this.C_DISTRICT = C_DISTRICT;
+    }
+
+
     public Customer() {
     }
 
@@ -69,15 +87,6 @@ public class Customer implements Serializable {
 
     public void setC_LOGIN(Date c_LOGIN) {
         C_LOGIN = c_LOGIN;
-    }
-
-    public Integer getC_ID() {
-        return C_ID;
-    }
-
-
-    public void setC_ID(Integer c_ID) {
-        C_ID = c_ID;
     }
 
 

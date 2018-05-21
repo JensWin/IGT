@@ -21,20 +21,19 @@ import java.util.List;
 public class CompanyController {
 
 
-    @RequestMapping(value="/update", method = RequestMethod.PUT)
-    public void updateCompany(Company c) {
+    @RequestMapping(value="/update", method = RequestMethod.GET)
+    public void updateCompany(@RequestParam(value ="name", required = true) String name,
+                              @RequestParam(value ="id", required = true) String id) {
         EntityManagerFactory emf = DatabaseController.emf;
         TransactionManager tm = DatabaseController.tm;
 
         try {
+            Company companyToUpdate = getCompany(id);
+            companyToUpdate.setC_NAME(name);
             EntityManager em = emf.createEntityManager();
-            tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
             tm.begin();
 
-            Company companyToUpdate = em.find(Company.class, c.getC_ID());
-            companyToUpdate = c;
-
-            em.merge(c);
+            em.merge(companyToUpdate);
 
             em.flush();
             em.close();

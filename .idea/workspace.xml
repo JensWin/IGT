@@ -2,11 +2,79 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="532c6766-d153-4b80-80a9-de584dddc609" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/segments_1a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/segments_1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Warehouse/segments_6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/DistrictController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/DistrictController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/District.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/District.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20180130.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/igt/mapper/ConnectionManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/igt/mapper/controller/CompanyControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1b.fdt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1b.fdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1b.fnm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1b.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1b_Lucene50_0.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1b_Lucene50_0.pos" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1b_Lucene50_0.tim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1b_Lucene50_0.tip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1c.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1c.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1c.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1d.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1d.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1d.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1e.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1e.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1e.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1f.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1f.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1f.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1g.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1g.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1g.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1h.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1h.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1h.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1i.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1i.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1i.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1j.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1j.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_1j.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/segments_1b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Customer/_j.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Customer/_j.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Customer/_j.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Customer/segments_h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/segments_2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Item/segments_1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/segments_1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.OrderLine/segments_1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Warehouse/segments_7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercise5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/exercise5.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igt/mapper/DatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igt/mapper/DatabaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/CompanyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/NewOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/NewOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/OrderLineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/OrderLineController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/NewOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/NewOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/OrderLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/OrderLine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/igt/mapper/controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/igt/mapper/controller/CustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/igt/mapper/controller/DistrictController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/igt/mapper/controller/DistrictController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/igt/mapper/controller/ItemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/igt/mapper/controller/ItemController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/igt/mapper/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/igt/mapper/controller/OrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/igt/mapper/controller/OrderLineController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/igt/mapper/controller/OrderLineController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/igt/mapper/controller/StockController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/igt/mapper/model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/igt/mapper/model/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/igt/mapper/model/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/igt/mapper/model/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/igt/mapper/model/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/igt/mapper/model/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/igt/mapper/model/OrderLine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/igt/mapper/model/OrderLine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/igt/mapper/model/Stock.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,26 +89,21 @@
       <file leaf-file-name="Company.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Company.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+            <state relative-caret-position="406">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Warehouse.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Warehouse.java">
+      <file leaf-file-name="DatabaseController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/DatabaseController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="42" column="5" lean-forward="true" selection-start-line="36" selection-start-column="4" selection-end-line="42" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="District.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/District.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+            <state relative-caret-position="570">
+              <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+              <folding>
+                <element signature="e#3002#3003#0" expanded="true" />
+                <element signature="e#3029#3030#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -48,12 +111,12 @@
       <file leaf-file-name="CompanyController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/CompanyController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
-              <caret line="233" column="5" selection-start-line="233" selection-start-column="5" selection-end-line="233" selection-end-column="5" />
+            <state relative-caret-position="151">
+              <caret line="87" column="24" lean-forward="true" selection-start-line="86" selection-start-column="8" selection-end-line="87" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#updateCompany#0;class#CompanyController#0" />
                 <element signature="method#getCompany#0;class#CompanyController#0" />
+                <element signature="method#createCompany#0;class#CompanyController#0" />
                 <element signature="method#deleteCompany#0;class#CompanyController#0" />
                 <element signature="method#getCompanyIds#0;class#CompanyController#0" />
                 <element signature="method#getCompanys#0;class#CompanyController#0" />
@@ -62,11 +125,52 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="MapperApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/MapperApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CompanyControllerTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/igt/mapper/controller/CompanyControllerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="161" lean-forward="true" selection-start-line="161" selection-end-line="161" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#updateCompany#0;class#CompanyControllerTest#0" />
+                <element signature="method#getCompany#0;class#CompanyControllerTest#0" />
+                <element signature="method#createCompany#0;class#CompanyControllerTest#0" />
+                <element signature="method#deleteCompany#0;class#CompanyControllerTest#0" />
+                <element signature="method#getCompanyIds#0;class#CompanyControllerTest#0" />
+                <element signature="method#getCompanys#0;class#CompanyControllerTest#0" />
+                <element signature="method#create#0;class#CompanyControllerTest#0" />
+                <element signature="method#getIds#0;class#CompanyControllerTest#0" />
+                <element signature="method#get#0;class#CompanyControllerTest#0" />
+                <element signature="method#getAll#0;class#CompanyControllerTest#0" />
+                <element signature="method#deleteAll#0;class#CompanyControllerTest#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="persistence.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="481">
+              <caret line="128" column="73" selection-start-line="128" selection-start-column="73" selection-end-line="128" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="WarehouseController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/WarehouseController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1426">
-              <caret line="195" column="5" lean-forward="true" selection-start-line="195" selection-start-column="5" selection-end-line="195" selection-end-column="5" />
+            <state relative-caret-position="15">
+              <caret line="195" column="5" selection-start-line="195" selection-start-column="5" selection-end-line="195" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#updateWarehouse#0;class#WarehouseController#0" />
@@ -77,27 +181,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DistrictController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/DistrictController.java">
+      <file leaf-file-name="ConnectionManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/igt/mapper/ConnectionManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="89" column="48" selection-start-line="89" selection-start-column="48" selection-end-line="89" selection-end-column="48" />
+            <state relative-caret-position="435">
+              <caret line="29" column="9" selection-start-line="8" selection-start-column="4" selection-end-line="29" selection-end-column="9" />
               <folding>
-                <element signature="method#updateDistrict#0;class#DistrictController#0" />
-                <element signature="method#getDistrict#0;class#DistrictController#0" />
-                <element signature="method#deleteDistrict#0;class#DistrictController#0" />
-                <element signature="e#4885#4895#0" expanded="true" />
-                <element signature="e#6142#6152#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Config.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/Config.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -107,6 +198,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Arquillian JUnit Test Class" />
+        <option value="JUnit4 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -117,21 +211,32 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/ItemController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/OrderController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/OrderLineController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/StockController.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/Config.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/DatabaseController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/CompanyController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Company.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Warehouse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/WarehouseController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/District.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/DistrictController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/CustomerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/ItemController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/OrderLine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/OrderLineController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/NewOrder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/NewOrderController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/OrderController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Item.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/igt/mapper/model/CompanyTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/igt/mapper/model/ConnectionManager.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/igt/mapper/ConnectionManager.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/DatabaseController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/CompanyController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/igt/mapper/controller/CompanyControllerTest.java" />
       </list>
     </option>
   </component>
@@ -156,37 +261,37 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="exercise5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IGT" type="462c0819:PsiDirectoryNode" />
+              <item name="IGT2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="exercise5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IGT" type="462c0819:PsiDirectoryNode" />
+              <item name="IGT2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="exercise5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IGT" type="462c0819:PsiDirectoryNode" />
+              <item name="IGT2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="exercise5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IGT" type="462c0819:PsiDirectoryNode" />
+              <item name="IGT2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="exercise5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IGT" type="462c0819:PsiDirectoryNode" />
+              <item name="IGT2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -194,7 +299,7 @@
             </path>
             <path>
               <item name="exercise5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IGT" type="462c0819:PsiDirectoryNode" />
+              <item name="IGT2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -203,12 +308,48 @@
             </path>
             <path>
               <item name="exercise5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IGT" type="462c0819:PsiDirectoryNode" />
+              <item name="IGT2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exercise5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IGT2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exercise5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IGT2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exercise5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IGT2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exercise5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IGT2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exercise5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IGT2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -225,9 +366,29 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.igt.mapper.controller" />
+      <recent name="com.igt.mapper.model" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.igt.mapper" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.igt.mapper.model" />
+      <recent name="com.igt.mapper.controller" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -241,9 +402,101 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.CompanyControllerTest">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="CompanyControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="exercise5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.igt.mapper.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.igt.mapper.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.igt.mapper.controller.CompanyControllerTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="CompanyControllerTest.getCompany" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="exercise5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.igt.mapper.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.igt.mapper.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.igt.mapper.controller.CompanyControllerTest" />
+      <option name="METHOD_NAME" value="getCompany" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="CompanyControllerTest.getCompanys" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="exercise5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.igt.mapper.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.igt.mapper.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.igt.mapper.controller.CompanyControllerTest" />
+      <option name="METHOD_NAME" value="getCompanys" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="CompanyControllerTest.updateCompany" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="exercise5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.igt.mapper.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.igt.mapper.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.igt.mapper.controller.CompanyControllerTest" />
+      <option name="METHOD_NAME" value="updateCompany" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -293,9 +546,20 @@
       <properties />
       <listeners />
     </configuration>
+    <list>
+      <item itemvalue="JUnit.CompanyControllerTest.getCompanys" />
+      <item itemvalue="JUnit.CompanyControllerTest.getCompany" />
+      <item itemvalue="JUnit.CompanyControllerTest.updateCompany" />
+      <item itemvalue="Spring Boot.MapperApplication" />
+      <item itemvalue="JUnit.CompanyControllerTest" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CompanyControllerTest" />
+        <item itemvalue="JUnit.CompanyControllerTest.updateCompany" />
         <item itemvalue="Spring Boot.MapperApplication" />
+        <item itemvalue="JUnit.CompanyControllerTest.getCompany" />
+        <item itemvalue="JUnit.CompanyControllerTest.getCompanys" />
       </list>
     </recent_temporary>
   </component>
@@ -315,11 +579,55 @@
       <workItem from="1526569582073" duration="1095000" />
       <workItem from="1526584352457" duration="4441000" />
       <workItem from="1526631348213" duration="865000" />
+      <workItem from="1526831269250" duration="5407000" />
+      <workItem from="1526837425281" duration="3960000" />
+      <workItem from="1526849657902" duration="12167000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="CompanyControllerTest_updateCompany - 2018.05.21 at 02h 05m 12s.xml">
+      <configuration name="CompanyControllerTest.updateCompany" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CompanyControllerTest_updateCompany - 2018.05.21 at 02h 13m 00s.xml">
+      <configuration name="CompanyControllerTest.updateCompany" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CompanyControllerTest_updateCompany - 2018.05.21 at 02h 15m 46s.xml">
+      <configuration name="CompanyControllerTest.updateCompany" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CompanyControllerTest_updateCompany - 2018.05.21 at 02h 18m 23s.xml">
+      <configuration name="CompanyControllerTest.updateCompany" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CompanyControllerTest_updateCompany - 2018.05.21 at 02h 18m 58s.xml">
+      <configuration name="CompanyControllerTest.updateCompany" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CompanyControllerTest_updateCompany - 2018.05.21 at 02h 19m 45s.xml">
+      <configuration name="CompanyControllerTest.updateCompany" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CompanyControllerTest_updateCompany - 2018.05.21 at 02h 21m 27s.xml">
+      <configuration name="CompanyControllerTest.updateCompany" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CompanyControllerTest_updateCompany - 2018.05.21 at 02h 21m 53s.xml">
+      <configuration name="CompanyControllerTest.updateCompany" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CompanyControllerTest_updateCompany - 2018.05.21 at 02h 22m 16s.xml">
+      <configuration name="CompanyControllerTest.updateCompany" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CompanyControllerTest - 2018.05.21 at 02h 24m 06s.xml">
+      <configuration name="CompanyControllerTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16989000" />
+    <option name="totallyTimeSpent" value="38523000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="950" extended-state="6" />
@@ -336,19 +644,20 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32925338" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32925338" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32925338" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32925338" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.329718" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26342005" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32925338" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.255119" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32925338" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -356,15 +665,13 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.329718" />
       <window_info id="Image Layers" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -389,8 +696,9 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,117 +709,18 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="15" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Warehouse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="39" lean-forward="true" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/District.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="14" lean-forward="true" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/CompanyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="233" column="5" lean-forward="true" selection-start-line="233" selection-start-column="5" selection-end-line="233" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#updateCompany#0;class#CompanyController#0" />
-            <element signature="method#getCompany#0;class#CompanyController#0" />
-            <element signature="method#deleteCompany#0;class#CompanyController#0" />
-            <element signature="method#getCompanyIds#0;class#CompanyController#0" />
-            <element signature="method#getCompanys#0;class#CompanyController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/WarehouseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="104" column="12" selection-start-line="104" selection-start-column="12" selection-end-line="104" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#updateWarehouse#0;class#WarehouseController#0" />
-            <element signature="method#getWarehouse#0;class#WarehouseController#0" />
-            <element signature="method#deleteWarehouse#0;class#WarehouseController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="76" selection-start-line="4" selection-start-column="76" selection-end-line="4" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/DistrictController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="92" column="13" lean-forward="true" selection-start-line="90" selection-start-column="13" selection-end-line="92" selection-end-column="13" />
-          <folding>
-            <element signature="method#updateDistrict#0;class#DistrictController#0" />
-            <element signature="method#getDistrict#0;class#DistrictController#0" />
-            <element signature="method#deleteDistrict#0;class#DistrictController#0" />
-            <element signature="e#4885#4895#0" expanded="true" />
-            <element signature="e#6142#6152#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Company.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/CustomerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="36" column="65" lean-forward="true" selection-start-line="36" selection-start-column="65" selection-end-line="36" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/CompanyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1395">
-          <caret line="106" column="22" lean-forward="true" selection-start-line="106" selection-start-column="22" selection-end-line="106" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#updateCompany#0;class#CompanyController#0" />
-            <element signature="method#getCompany#0;class#CompanyController#0" />
-            <element signature="method#deleteCompany#0;class#CompanyController#0" />
-            <element signature="method#getCompanyIds#0;class#CompanyController#0" />
-            <element signature="method#getCompanys#0;class#CompanyController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Company.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/CompanyController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1485">
           <caret line="113" column="23" lean-forward="true" selection-start-line="113" selection-start-column="18" selection-end-line="113" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#updateCompany#0;class#CompanyController#0" />
             <element signature="method#getCompany#0;class#CompanyController#0" />
+            <element signature="method#createCompany#0;class#CompanyController#0" />
             <element signature="method#deleteCompany#0;class#CompanyController#0" />
             <element signature="method#getCompanyIds#0;class#CompanyController#0" />
             <element signature="method#getCompanys#0;class#CompanyController#0" />
@@ -532,8 +741,8 @@
           <caret line="111" selection-start-line="111" selection-end-line="111" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#updateCompany#0;class#CompanyController#0" />
             <element signature="method#getCompany#0;class#CompanyController#0" />
+            <element signature="method#createCompany#0;class#CompanyController#0" />
             <element signature="method#deleteCompany#0;class#CompanyController#0" />
             <element signature="method#getCompanyIds#0;class#CompanyController#0" />
             <element signature="method#getCompanys#0;class#CompanyController#0" />
@@ -554,8 +763,8 @@
           <caret line="236" selection-start-line="236" selection-end-line="236" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#updateCompany#0;class#CompanyController#0" />
             <element signature="method#getCompany#0;class#CompanyController#0" />
+            <element signature="method#createCompany#0;class#CompanyController#0" />
             <element signature="method#deleteCompany#0;class#CompanyController#0" />
             <element signature="method#getCompanyIds#0;class#CompanyController#0" />
             <element signature="method#getCompanys#0;class#CompanyController#0" />
@@ -591,13 +800,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/StockController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2280">
-          <caret line="152" selection-start-line="152" selection-end-line="152" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/StockController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/WarehouseController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
@@ -612,49 +815,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/ItemController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1800">
-          <caret line="233" selection-start-line="233" selection-end-line="233" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/OrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1845">
-          <caret line="233" selection-start-line="233" selection-end-line="233" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/OrderLineController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1845">
-          <caret line="233" selection-start-line="233" selection-end-line="233" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/StockController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="152" selection-start-line="152" selection-end-line="152" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/StockController.java" />
     <entry file="file://$PROJECT_DIR$/.gitignore" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/MapperApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/src.zip!/java/lang/NumberFormatException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -666,13 +828,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
           <caret line="747" selection-start-line="747" selection-end-line="747" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -746,61 +901,166 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/CustomerController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/DistrictController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="36" column="65" selection-start-line="36" selection-start-column="65" selection-end-line="36" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/DatabaseController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Company.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/CompanyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="233" column="5" selection-start-line="233" selection-start-column="5" selection-end-line="233" selection-end-column="5" />
+        <state relative-caret-position="406">
+          <caret line="236" lean-forward="true" selection-start-line="236" selection-end-line="236" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#updateCompany#0;class#CompanyController#0" />
-            <element signature="method#getCompany#0;class#CompanyController#0" />
-            <element signature="method#deleteCompany#0;class#CompanyController#0" />
-            <element signature="method#getCompanyIds#0;class#CompanyController#0" />
-            <element signature="method#getCompanys#0;class#CompanyController#0" />
+            <element signature="method#updateDistrict#0;class#DistrictController#0" />
+            <element signature="method#getDistrict#0;class#DistrictController#0" />
+            <element signature="method#createDistrict#0;class#DistrictController#0" />
+            <element signature="method#deleteDistrict#0;class#DistrictController#0" />
+            <element signature="method#getDistrictIds#0;class#DistrictController#0" />
+            <element signature="e#4886#4896#0" expanded="true" />
+            <element signature="e#4940#4948#0" expanded="true" />
+            <element signature="method#getDistrict#1;class#DistrictController#0" />
+            <element signature="e#6143#6153#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Warehouse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="42" column="5" lean-forward="true" selection-start-line="36" selection-start-column="4" selection-end-line="42" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/District.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/Config.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/CustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/NewOrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="89" column="47" selection-start-line="89" selection-start-column="47" selection-end-line="89" selection-end-column="47" />
+          <folding>
+            <element signature="method#updateCompany#0;class#NewOrderController#0" />
+            <element signature="method#getCompany#0;class#NewOrderController#0" />
+            <element signature="method#createCompany#0;class#NewOrderController#0" />
+            <element signature="method#deleteCompany#0;class#NewOrderController#0" />
+            <element signature="method#getCompanyIds#0;class#NewOrderController#0" />
+            <element signature="e#4866#4876#0" expanded="true" />
+            <element signature="method#getCompanys#0;class#NewOrderController#0" />
+            <element signature="e#6168#6178#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/OrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="97" column="33" selection-start-line="97" selection-start-column="33" selection-end-line="97" selection-end-column="33" />
+          <folding>
+            <element signature="method#updateOrder#0;class#OrderController#0" />
+            <element signature="method#getOrder#0;class#OrderController#0" />
+            <element signature="method#deleteOrder#0;class#OrderController#0" />
+            <element signature="method#getDistrictIds#0;class#OrderController#0" />
+            <element signature="e#4806#4813#0" expanded="true" />
+            <element signature="e#4875#4883#0" expanded="true" />
+            <element signature="method#getOrder#1;class#OrderController#0" />
+            <element signature="e#6051#6058#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/ItemController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="231" column="5" selection-start-line="152" selection-start-column="4" selection-end-line="231" selection-end-column="5" />
+          <folding>
+            <element signature="method#updateItem#0;class#ItemController#0" />
+            <element signature="method#getItem#0;class#ItemController#0" />
+            <element signature="method#deleteItem#0;class#ItemController#0" />
+            <element signature="method#getIds#0;class#ItemController#0" />
+            <element signature="e#4790#4796#0" expanded="true" />
+            <element signature="e#4842#4850#0" expanded="true" />
+            <element signature="method#getOrder#0;class#ItemController#0" />
+            <element signature="e#6030#6037#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/OrderLineController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+          <folding>
+            <element signature="method#updateOrderLine#0;class#OrderLineController#0" />
+            <element signature="method#getOrderLine#0;class#OrderLineController#0" />
+            <element signature="method#deleteOrderLine#0;class#OrderLineController#0" />
+            <element signature="method#getIds#0;class#OrderLineController#0" />
+            <element signature="e#4975#4986#0" expanded="true" />
+            <element signature="e#5028#5036#0" expanded="true" />
+            <element signature="e#6233#6244#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1245">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/District.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Warehouse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="35" column="14" lean-forward="true" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/NewOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="42" column="14" lean-forward="true" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/OrderLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/igt/mapper/model/CompanyTest.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="169" column="21" selection-start-line="169" selection-start-column="21" selection-end-line="169" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/WarehouseController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1426">
-          <caret line="195" column="5" lean-forward="true" selection-start-line="195" selection-start-column="5" selection-end-line="195" selection-end-column="5" />
+        <state relative-caret-position="15">
+          <caret line="195" column="5" selection-start-line="195" selection-start-column="5" selection-end-line="195" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#updateWarehouse#0;class#WarehouseController#0" />
@@ -810,16 +1070,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/DistrictController.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/igt/mapper/ConnectionManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="89" column="48" selection-start-line="89" selection-start-column="48" selection-end-line="89" selection-end-column="48" />
+        <state relative-caret-position="435">
+          <caret line="29" column="9" selection-start-line="8" selection-start-column="4" selection-end-line="29" selection-end-column="9" />
           <folding>
-            <element signature="method#updateDistrict#0;class#DistrictController#0" />
-            <element signature="method#getDistrict#0;class#DistrictController#0" />
-            <element signature="method#deleteDistrict#0;class#DistrictController#0" />
-            <element signature="e#4885#4895#0" expanded="true" />
-            <element signature="e#6142#6152#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="128" column="73" selection-start-line="128" selection-start-column="73" selection-end-line="128" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Company.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/DatabaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+          <folding>
+            <element signature="e#3002#3003#0" expanded="true" />
+            <element signature="e#3029#3030#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Assert.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="e#594#595#0" expanded="true" />
+            <element signature="e#645#646#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/MapperApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/CompanyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="87" column="24" lean-forward="true" selection-start-line="86" selection-start-column="8" selection-end-line="87" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getCompany#0;class#CompanyController#0" />
+            <element signature="method#createCompany#0;class#CompanyController#0" />
+            <element signature="method#deleteCompany#0;class#CompanyController#0" />
+            <element signature="method#getCompanyIds#0;class#CompanyController#0" />
+            <element signature="method#getCompanys#0;class#CompanyController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/igt/mapper/controller/CompanyControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="161" lean-forward="true" selection-start-line="161" selection-end-line="161" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#updateCompany#0;class#CompanyControllerTest#0" />
+            <element signature="method#getCompany#0;class#CompanyControllerTest#0" />
+            <element signature="method#createCompany#0;class#CompanyControllerTest#0" />
+            <element signature="method#deleteCompany#0;class#CompanyControllerTest#0" />
+            <element signature="method#getCompanyIds#0;class#CompanyControllerTest#0" />
+            <element signature="method#getCompanys#0;class#CompanyControllerTest#0" />
+            <element signature="method#create#0;class#CompanyControllerTest#0" />
+            <element signature="method#getIds#0;class#CompanyControllerTest#0" />
+            <element signature="method#get#0;class#CompanyControllerTest#0" />
+            <element signature="method#getAll#0;class#CompanyControllerTest#0" />
+            <element signature="method#deleteAll#0;class#CompanyControllerTest#0" />
           </folding>
         </state>
       </provider>

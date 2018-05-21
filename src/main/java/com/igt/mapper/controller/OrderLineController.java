@@ -1,15 +1,21 @@
 package com.igt.mapper.controller;
 
 import com.igt.mapper.Config;
+import com.igt.mapper.DatabaseController;
+import com.igt.mapper.model.Item;
 import com.igt.mapper.model.Order;
 import com.igt.mapper.model.OrderLine;
+import com.igt.mapper.model.Warehouse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 import javax.transaction.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 @RequestMapping("/orderLine")
@@ -81,19 +87,24 @@ public class OrderLineController {
 
     @RequestMapping(value = "/create", method = RequestMethod.GET)
     public @ResponseBody
-    void createOrderLine(@RequestParam(value ="name", required = true) String name) {
+    void createOrderLine(@RequestParam(value ="order", required = true) String Order_ID,
+                         @RequestParam(value ="item", required = true) String Item_ID) {
 
-        OrderLine orderLine1 = new OrderLine();
+        OrderLine orderline = new OrderLine();
 
-        orderLine1.setC_ID(1);
-        orderLine1.setC_NAME("Test");
 
         try {
             EntityManager em = emf.createEntityManager();
             tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
             tm.begin();
 
-            em.persist(orderLine1);
+            Order c = em.find(Order.class,Order_ID);
+            orderline.setC_ORDER(c);
+
+            Item i = em.find(Item.class,Item_ID);
+            orderline.setC_ITEM(i);
+
+            em.persist(orderline);
 
             em.flush();
             em.close();
@@ -143,33 +154,28 @@ public class OrderLineController {
 
     }
 
-    @RequestMapping(value="/db", method = RequestMethod.GET)
-    public @ResponseBody
-    void changeDB(@RequestParam(value = "type") String type){
-        emf = Persistence.createEntityManagerFactory(type);
 
-    }
-    /*
     @RequestMapping(value="/getAllIds", method = RequestMethod.GET)
     public @ResponseBody
-    List<Integer> getDistrictIds(){
-
-        List<Company> allCompanys = new ArrayList<Company>();
-        List<Integer> companyIdz = new ArrayList<Integer>();
+    List<String> getIds(){
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
+        List<OrderLine> all = new ArrayList<OrderLine>();
+        List<String> Ids = new ArrayList<String>();
 
         try {
             EntityManager em = emf.createEntityManager();
 
-            String queryString = new String("SELECT c FROM Company c");
+            String queryString = new String("SELECT c FROM OrderLine c");
 
             tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
             tm.begin();
 
             Query q = em.createQuery(queryString);
-            allCompanys = q.getResultList();
+            all = q.getResultList();
 
-            for(Company c : allCompanys){
-                companyIdz.add(c.getC_ID());
+            for(OrderLine c : all){
+                Ids.add(c.getC_ID());
             }
 
             em.flush();
@@ -189,26 +195,27 @@ public class OrderLineController {
             e.printStackTrace();
         }
 
-        return companyIdz;
+        return Ids;
     }
 
     @RequestMapping(value="/getAll", method = RequestMethod.GET)
     public @ResponseBody
-    List<Company> getDistricts(){
+    List<OrderLine> getItem(){
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.tm;
+        List<OrderLine> all = new ArrayList<OrderLine>();
 
-        List<Company> allCompanys = new ArrayList<Company>();
-        List<Integer> companyIdz = new ArrayList<Integer>();
 
         try {
             EntityManager em = emf.createEntityManager();
 
-            String queryString = new String("SELECT c FROM Company c");
+            String queryString = new String("SELECT c FROM OrderLine c");
 
             tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
             tm.begin();
 
             Query q = em.createQuery(queryString);
-            allCompanys = q.getResultList();
+            all = q.getResultList();
 
             em.flush();
             em.close();
@@ -226,8 +233,6 @@ public class OrderLineController {
             e.printStackTrace();
         }
 
-        return allCompanys;
+        return all;
     }
-
-    */
 }

@@ -1,28 +1,28 @@
 package com.igt.mapper.controller;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.igt.mapper.Config;
 import com.igt.mapper.DatabaseController;
 import com.igt.mapper.model.Company;
+import com.igt.mapper.model.Customer;
+import com.igt.mapper.model.NewOrder;
+import com.igt.mapper.model.Order;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import javax.persistence.Query;
 import javax.transaction.*;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Controller
-@RequestMapping("/company")
-public class CompanyController {
+@RequestMapping("/newOrder")
+public class NewOrderController {
 
 
     @RequestMapping(value="/update", method = RequestMethod.PUT)
-    public void updateCompany(Company c) {
+    public void updateNewOrder(NewOrder c) {
         EntityManagerFactory emf = DatabaseController.emf;
         TransactionManager tm = DatabaseController.tm;
 
@@ -31,8 +31,8 @@ public class CompanyController {
             tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
             tm.begin();
 
-            Company companyToUpdate = em.find(Company.class, c.getC_ID());
-            companyToUpdate = c;
+            NewOrder NewOrderToUpdate = em.find(NewOrder.class, c.getC_ID());
+            NewOrderToUpdate = c;
 
             em.merge(c);
 
@@ -57,16 +57,16 @@ public class CompanyController {
 
     @RequestMapping(value="/get/{id}", method = RequestMethod.GET)
     public @ResponseBody
-    Company getCompany(@PathVariable(value = "id", required = true) String id) {
+    NewOrder getNewOrder(@PathVariable(value = "id", required = true) String id) {
         EntityManagerFactory emf = DatabaseController.emf;
         TransactionManager tm = DatabaseController.tm;
-        Company comp = null;
+        NewOrder NewOrder = null;
 
         try {
             EntityManager em = emf.createEntityManager();
             tm.begin();
 
-            comp = em.find(Company.class, id);
+            NewOrder = em.find(NewOrder.class, id);
 
             em.flush();
             em.close();
@@ -82,24 +82,28 @@ public class CompanyController {
         } catch (RollbackException e) {
             e.printStackTrace();
         }
-        return comp;
+        return NewOrder;
     }
 
     @RequestMapping(value = "/create", method = RequestMethod.GET)
     public @ResponseBody
-    void createCompany(@RequestParam(value ="name", required = true) String name) {
+    void createNewOrder(@RequestParam(value ="order", required = true) String Order_ID) {
         EntityManagerFactory emf = DatabaseController.emf;
         TransactionManager tm = DatabaseController.tm;
-        Company company1 = new Company();
+        NewOrder NewOrder = new NewOrder();
 
-        company1.setC_NAME(name);
+
 
         try {
 
             EntityManager em = emf.createEntityManager();
             tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
             tm.begin();
-            em.persist(company1);
+
+            Order c = em.find(Order.class,Order_ID);
+            NewOrder.setC_ORDER(c);
+
+            em.persist(NewOrder);
             em.flush();
             em.close();
             tm.commit();
@@ -121,7 +125,7 @@ public class CompanyController {
 
     @RequestMapping(value="/delete", method = RequestMethod.GET)
     public @ResponseBody
-    void deleteCompany(@RequestParam(value = "id") String id){
+    void deleteNewOrder(@RequestParam(value = "id") String id){
         EntityManagerFactory emf = DatabaseController.emf;
         TransactionManager tm = DatabaseController.tm;
         try {
@@ -129,9 +133,9 @@ public class CompanyController {
             tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
             tm.begin();
 
-            Company comp = em.find(Company.class, id);
+            NewOrder NewOrder = em.find(NewOrder.class, id);
 
-            em.remove(comp);
+            em.remove(NewOrder);
 
             em.flush();
             em.close();
@@ -154,16 +158,16 @@ public class CompanyController {
 
     @RequestMapping(value="/getAllIds", method = RequestMethod.GET)
     public @ResponseBody
-    List<String> getCompanyIds(){
+    List<String> getNewOrderIds(){
         EntityManagerFactory emf = DatabaseController.emf;
         TransactionManager tm = DatabaseController.tm;
-        List<Company> allCompanys = new ArrayList<Company>();
+        List<NewOrder> allCompanys = new ArrayList<NewOrder>();
         List<String> companyIdz = new ArrayList<String>();
 
         try {
             EntityManager em = emf.createEntityManager();
 
-            String queryString = new String("SELECT c FROM Company c");
+            String queryString = new String("SELECT c FROM NewOrder c");
 
             tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
             tm.begin();
@@ -171,7 +175,7 @@ public class CompanyController {
             Query q = em.createQuery(queryString);
             allCompanys = q.getResultList();
 
-            for(Company c : allCompanys){
+            for(NewOrder c : allCompanys){
                 companyIdz.add(c.getC_ID());
             }
 
@@ -197,22 +201,22 @@ public class CompanyController {
 
     @RequestMapping(value="/getAll", method = RequestMethod.GET)
     public @ResponseBody
-    List<Company> getCompanys(){
+    List<NewOrder> getNewOrder(){
         EntityManagerFactory emf = DatabaseController.emf;
         TransactionManager tm = DatabaseController.tm;
-        List<Company> allCompanys = new ArrayList<Company>();
+        List<NewOrder> allNewOrder = new ArrayList<NewOrder>();
 
 
         try {
             EntityManager em = emf.createEntityManager();
 
-            String queryString = new String("SELECT c FROM Company c");
+            String queryString = new String("SELECT c FROM NewOrder c");
 
             tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
             tm.begin();
 
             Query q = em.createQuery(queryString);
-            allCompanys = q.getResultList();
+            allNewOrder = q.getResultList();
 
             em.flush();
             em.close();
@@ -230,7 +234,7 @@ public class CompanyController {
             e.printStackTrace();
         }
 
-        return allCompanys;
+        return allNewOrder;
     }
 
 }

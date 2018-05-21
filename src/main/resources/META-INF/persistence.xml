@@ -50,7 +50,7 @@
             <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/postgres"/>
             <property name="hibernate.connection.username" value="postgres"/>
             <property name="hibernate.connection.password" value="toor"/>
-            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
             <!--    <property name="hibernate.connection.isolation" value="SERIALIZABLE" /> -->
             <!--  <property name="hibernate.connection.isolation" value="READ_COMMITTED" /> -->
 
@@ -71,6 +71,7 @@
                       value="true"/>
             <property name="hibernate.ogm.datastore.host" value="localhost"/>
             <property name="hibernate.ogm.datastore.port" value="27017"/>
+            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
             <!--<property name="hibernate.ogm.datastore.username" value="root"/>
             <property name="hibernate.ogm.datastore.password" value="toor"/>
     -->
@@ -85,6 +86,7 @@
             <property name="hibernate.ogm.datastore.host" value="localhost:7687"/>
             <property name="hibernate.ogm.datastore.username" value="neo4j"/>
             <property name="hibernate.ogm.datastore.password" value="neo4j"/>
+            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
         </properties>
     </persistence-unit>
 
@@ -93,6 +95,7 @@
         <provider>org.hibernate.ogm.jpa.HibernateOgmPersistence</provider>
         <properties>
             <property name="hibernate.ogm.datastore.provider" value="infinispan"/>
+            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
         </properties>
     </persistence-unit>
 
@@ -123,6 +126,7 @@
             <!-- <property name="hibernate.ogm.datastore.grid_dialect" value="org.hibernate.ogm.datastore.redis.RedisHashDialect" /> -->
             <property name="hibernate.ogm.datastore.grid_dialect"
                       value="org.hibernate.ogm.datastore.redis.RedisJsonDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
         </properties>
     </persistence-unit>
 

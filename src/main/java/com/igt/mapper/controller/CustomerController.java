@@ -8,6 +8,7 @@ import javax.persistence.Query;
 import javax.transaction.*;
 import com.igt.mapper.Config;
 import com.igt.mapper.model.Customer;
+import com.igt.mapper.model.District;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,7 +30,7 @@ public class CustomerController {
     EntityManagerFactory emf = Persistence.createEntityManagerFactory(Config.PERSISTENCE_UNIT_NAME);
 
 
-    @RequestMapping(value="/updateCustomer", method = RequestMethod.PUT)
+    @RequestMapping(value="/update", method = RequestMethod.PUT)
     public void updateCustomer(Customer c) {
 
         try {
@@ -61,7 +62,7 @@ public class CustomerController {
 
     }
 
-    @RequestMapping(value="/getCustomer/{id}", method = RequestMethod.GET)
+    @RequestMapping(value="/get/{id}", method = RequestMethod.GET)
     public @ResponseBody
     Customer getCustomer(@PathVariable(value = "id", required = true) int id) {
 
@@ -96,9 +97,10 @@ public class CustomerController {
 
     }
 
-    @RequestMapping(value = "/createCustomer", method = RequestMethod.GET)
+    @RequestMapping(value = "/create", method = RequestMethod.GET)
     public @ResponseBody
-    void createCustomers(@RequestParam(value ="name", required = true) String name) {
+    void createCustomers(@RequestParam(value ="name", required = true) String name,
+                         @RequestParam(value ="district", required = true) String District_ID){
 
 
 
@@ -112,7 +114,6 @@ public class CustomerController {
         customer1.setC_EMAIL("email_1");
         customer1.setC_EXPIRATION(new Date());
         customer1.setC_FNAME(name);
-        customer1.setC_ID(3);
         customer1.setC_LAST_LOGIN(new Date());
         customer1.setC_LOGIN(new Date());
         customer1.setC_PASSWD("password_1");
@@ -129,6 +130,8 @@ public class CustomerController {
             tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
             tm.begin();
 
+            District c = em.find(District.class,District_ID);
+            customer1.setC_DISTRICT(c);
             em.persist(customer1);
 
 
@@ -151,7 +154,7 @@ public class CustomerController {
 
     }
 
-    @RequestMapping(value="/deleteCustomer", method = RequestMethod.GET)
+    @RequestMapping(value="/delete", method = RequestMethod.GET)
     public @ResponseBody
     void deleteCustomer(@RequestParam(value = "id") int id){
 
@@ -183,12 +186,12 @@ public class CustomerController {
     }
 
 
-    @RequestMapping(value="/getAllCustomersIds", method = RequestMethod.GET)
+    @RequestMapping(value="/getAllIds", method = RequestMethod.GET)
     public @ResponseBody
-    List<Integer> getCustomerIds(){
+    List<String> getCustomerIds(){
 
         List<Customer> allCustomers = new ArrayList<Customer>();
-        List<Integer> customerIdz = new ArrayList<Integer>();
+        List<String> customerIdz = new ArrayList<String>();
 
         try {
             EntityManager em = emf.createEntityManager();
@@ -225,7 +228,7 @@ public class CustomerController {
         return customerIdz;
     }
 
-    @RequestMapping(value="/getAllCustomers", method = RequestMethod.GET)
+    @RequestMapping(value="/getAll", method = RequestMethod.GET)
     public @ResponseBody
     List<Customer> getCustomers(){
 
@@ -264,10 +267,5 @@ public class CustomerController {
         return allCustomers;
     }
 
-    @RequestMapping(value="/db", method = RequestMethod.GET)
-    public @ResponseBody
-    void changeDB(){
-        emf = Persistence.createEntityManagerFactory("OGM_CASSANDRA");
 
-    }
 }

@@ -60,6 +60,11 @@ public class DatabaseController {
         emf = Persistence.createEntityManagerFactory(Config.PERSISTENCE_UNIT_NAME);
     }
 
+    @RequestMapping(value="/close", method = RequestMethod.GET)
+    public @ResponseBody void changeDB_close(){
+        emf.close();
+    }
+
     public void close(){
         try {
             emf.close();
