@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 
 @Entity
-@Indexed
+@Indexed(index="indexes/neworder")
 @Table(name = "NEWORDER")
 public class NewOrder implements Serializable{
 

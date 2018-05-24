@@ -8,7 +8,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-@Indexed
+@Indexed(index="indexes/orderino")
 @Table(name = "ORDERINO")
 public class Order implements Serializable {
     @Id

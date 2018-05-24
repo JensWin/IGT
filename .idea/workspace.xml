@@ -2,7 +2,265 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="532c6766-d153-4b80-80a9-de584dddc609" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/igt/mapper/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igt/mapper/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_m3.fdt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_m3.fdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_m3.fnm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_m3.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_m3_1.liv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_m3_Lucene50_0.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_m3_Lucene50_0.pos" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_m3_Lucene50_0.tim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_m3_Lucene50_0.tip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_m4.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_m4.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_m4.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_m5.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_m5.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_m5.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_m6.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_m6.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_m6.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_m7.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_m7.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_m7.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_ma.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_ma.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_ma.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mb.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mb.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mb.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mc.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mc.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mc.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_md.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_md.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_md.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_me.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_me.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_me.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mg.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mg.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mg.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mi.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mi.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mi.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mk.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mk.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mk.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_ml.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_ml.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_ml.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mn.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mn.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mn.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mo.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mo.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mo.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mq.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mq.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mq.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mr.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mr.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mr.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mt.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mt.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mt.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mu.fdt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mu.fdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mu.fnm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mu.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mu_Lucene50_0.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mu_Lucene50_0.pos" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mu_Lucene50_0.tim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/_mu_Lucene50_0.tip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/segments_141" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Company/write.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Customer/_cr.fdt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Customer/_cr.fdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Customer/_cr.fnm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Customer/_cr.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Customer/_cr_Lucene50_0.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Customer/_cr_Lucene50_0.pos" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Customer/_cr_Lucene50_0.tim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Customer/_cr_Lucene50_0.tip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Customer/_cs.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Customer/_cs.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Customer/_cs.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Customer/_ct.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Customer/_ct.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Customer/_ct.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Customer/_cu.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Customer/_cu.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Customer/_cu.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Customer/segments_g7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Customer/write.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/_h9.fdt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/_h9.fdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/_h9.fnm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/_h9.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/_h9_Lucene50_0.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/_h9_Lucene50_0.pos" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/_h9_Lucene50_0.tim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/_h9_Lucene50_0.tip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/_ha.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/_ha.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/_ha.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/_hb.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/_hb.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/_hb.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/_hc.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/_hc.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/_hc.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/_hd.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/_hd.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/_hd.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/_he.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/_he.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/_he.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/_hf.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/_hf.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/_hf.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/_hg.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/_hg.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/_hg.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/segments_k8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.District/write.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Item/_fy.fdt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Item/_fy.fdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Item/_fy.fnm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Item/_fy.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Item/_fy_Lucene50_0.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Item/_fy_Lucene50_0.pos" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Item/_fy_Lucene50_0.tim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Item/_fy_Lucene50_0.tip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Item/_fz.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Item/_fz.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Item/_fz.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Item/_g0.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Item/_g0.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Item/_g0.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Item/_g1.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Item/_g1.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Item/_g1.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Item/_g2.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Item/_g2.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Item/_g2.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Item/_g3.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Item/_g3.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Item/_g3.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Item/segments_n8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Item/write.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.NewOrder/_7s.fdt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.NewOrder/_7s.fdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.NewOrder/_7s.fnm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.NewOrder/_7s.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.NewOrder/_7s_1.liv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.NewOrder/_7s_Lucene50_0.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.NewOrder/_7s_Lucene50_0.pos" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.NewOrder/_7s_Lucene50_0.tim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.NewOrder/_7s_Lucene50_0.tip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.NewOrder/_7t.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.NewOrder/_7t.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.NewOrder/_7t.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.NewOrder/_7u.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.NewOrder/_7u.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.NewOrder/_7u.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.NewOrder/_7v.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.NewOrder/_7v.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.NewOrder/_7v.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.NewOrder/segments_d9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.NewOrder/write.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/_l2.fdt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/_l2.fdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/_l2.fnm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/_l2.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/_l2_Lucene50_0.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/_l2_Lucene50_0.pos" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/_l2_Lucene50_0.tim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/_l2_Lucene50_0.tip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/_l3.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/_l3.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/_l3.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/_l4.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/_l4.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/_l4.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/_l5.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/_l5.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/_l5.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/_l6.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/_l6.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/_l6.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/_l7.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/_l7.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/_l7.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/_l8.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/_l8.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/_l8.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/_l9.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/_l9.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/_l9.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/segments_tm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Order/write.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.OrderLine/_3t.fdt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.OrderLine/_3t.fdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.OrderLine/_3t.fnm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.OrderLine/_3t.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.OrderLine/_3t_Lucene50_0.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.OrderLine/_3t_Lucene50_0.pos" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.OrderLine/_3t_Lucene50_0.tim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.OrderLine/_3t_Lucene50_0.tip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.OrderLine/_3v.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.OrderLine/_3v.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.OrderLine/_3v.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.OrderLine/_3w.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.OrderLine/_3w.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.OrderLine/_3w.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.OrderLine/_3x.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.OrderLine/_3x.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.OrderLine/_3x.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.OrderLine/_3z.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.OrderLine/_3z.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.OrderLine/_3z.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.OrderLine/_40.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.OrderLine/_40.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.OrderLine/_40.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.OrderLine/segments_5i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.OrderLine/write.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Stock/segments_1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Stock/write.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Warehouse/_gv.fdt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Warehouse/_gv.fdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Warehouse/_gv.fnm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Warehouse/_gv.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Warehouse/_gv_1.liv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Warehouse/_gv_Lucene50_0.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Warehouse/_gv_Lucene50_0.pos" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Warehouse/_gv_Lucene50_0.tim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Warehouse/_gv_Lucene50_0.tip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Warehouse/_gw.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Warehouse/_gw.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Warehouse/_gw.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Warehouse/_gx.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Warehouse/_gx.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Warehouse/_gx.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Warehouse/segments_q3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.igt.mapper.model.Warehouse/write.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/District.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/District.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/NewOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/NewOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/OrderLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/OrderLine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Warehouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/igt/mapper/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/igt/mapper/Config.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/igt/mapper/model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/igt/mapper/model/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/igt/mapper/model/District.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/igt/mapper/model/District.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/igt/mapper/model/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/igt/mapper/model/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/igt/mapper/model/NewOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/igt/mapper/model/NewOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/igt/mapper/model/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/igt/mapper/model/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/igt/mapper/model/OrderLine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/igt/mapper/model/OrderLine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/igt/mapper/model/Warehouse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/igt/mapper/model/Warehouse.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,54 +275,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CustomerControllerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/igt/mapper/controllerTests/CustomerControllerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderControllerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/igt/mapper/controllerTests/OrderControllerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewOrderControllerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/igt/mapper/controllerTests/NewOrderControllerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="29" column="25" selection-start-line="25" selection-start-column="3" selection-end-line="29" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItemControllerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/igt/mapper/controllerTests/ItemControllerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WarehouseControllerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/igt/mapper/controllerTests/WarehouseControllerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DistrictControllerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/igt/mapper/controllerTests/DistrictControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -77,7 +287,7 @@
       <file leaf-file-name="Database.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/igt/mapper/controllerTests/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
+            <state relative-caret-position="330">
               <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -86,7 +296,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Config.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Config.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/Config.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
@@ -95,29 +305,69 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderLineControllerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/igt/mapper/controllerTests/OrderLineControllerTest.java">
+      <file leaf-file-name="Customer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="45" column="62" selection-start-line="33" selection-start-column="8" selection-end-line="45" selection-end-column="62" />
+            <state relative-caret-position="85">
+              <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewOrderController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/NewOrderController.java">
+      <file leaf-file-name="District.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/District.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="177" column="80" selection-start-line="177" selection-start-column="80" selection-end-line="177" selection-end-column="80" />
+            <state relative-caret-position="75">
+              <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Item.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Item.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewOrder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/NewOrder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Order.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Order.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
               <folding>
-                <element signature="method#update#0;class#NewOrderController#0" />
-                <element signature="method#get#0;class#NewOrderController#0" />
-                <element signature="method#delete#0;class#NewOrderController#0" />
-                <element signature="method#updateREST#0;class#NewOrderController#0" />
-                <element signature="method#getREST#0;class#NewOrderController#0" />
-                <element signature="method#createREST#0;class#NewOrderController#0" />
-                <element signature="method#deleteREST#0;class#NewOrderController#0" />
+                <element signature="e#515#516#0" expanded="true" />
+                <element signature="e#542#543#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderLine.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/OrderLine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Warehouse.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Warehouse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -173,13 +423,6 @@
         <option value="$PROJECT_DIR$/src/test/java/com/igt/mapper/controller/WarehouseControllerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/CompanyController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Company.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Customer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/District.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Warehouse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Item.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Order.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/NewOrder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/OrderLine.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/DistrictController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/WarehouseController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/ItemController.java" />
@@ -197,6 +440,13 @@
         <option value="$PROJECT_DIR$/src/test/java/com/igt/mapper/controllerTests/OrderLineControllerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/igt/mapper/controllerTests/Database.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/Config.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/District.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Item.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/OrderLine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Warehouse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/igt/mapper/model/NewOrder.java" />
       </list>
     </option>
   </component>
@@ -232,8 +482,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -287,19 +537,11 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="exercise5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IGT2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -349,9 +591,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.com.igt.mapper.controllerTests in exercise5">
+  <component name="RunManager" selected="JUnit.All in exercise5">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="All in exercise5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="exercise5" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration name="NewOrderControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="exercise5" />
@@ -367,52 +626,6 @@
       <option name="MAIN_CLASS_NAME" value="com.igt.mapper.controllerTests.NewOrderControllerTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="NewOrderControllerTest.get" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="exercise5" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.igt.mapper.controllerTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.igt.mapper.controllerTests" />
-      <option name="MAIN_CLASS_NAME" value="com.igt.mapper.controllerTests.NewOrderControllerTest" />
-      <option name="METHOD_NAME" value="get" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="NewOrderControllerTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="exercise5" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.igt.mapper.controllerTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.igt.mapper.controllerTests" />
-      <option name="MAIN_CLASS_NAME" value="com.igt.mapper.controllerTests.NewOrderControllerTest" />
-      <option name="METHOD_NAME" value="update" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -484,6 +697,16 @@
       </option>
       <patterns />
     </configuration>
+    <configuration name="MapperApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="exercise5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.igt.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.igt.mapper.MapperApplication" />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -508,18 +731,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.NewOrderControllerTest" />
-      <item itemvalue="JUnit.NewOrderControllerTest.update" />
-      <item itemvalue="JUnit.NewOrderControllerTest.get" />
       <item itemvalue="JUnit.WarehouseControllerTest" />
       <item itemvalue="JUnit.com.igt.mapper.controllerTests in exercise5" />
+      <item itemvalue="Spring Boot.MapperApplication" />
+      <item itemvalue="JUnit.All in exercise5" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in exercise5" />
+        <item itemvalue="Spring Boot.MapperApplication" />
         <item itemvalue="JUnit.com.igt.mapper.controllerTests in exercise5" />
         <item itemvalue="JUnit.WarehouseControllerTest" />
         <item itemvalue="JUnit.NewOrderControllerTest" />
-        <item itemvalue="JUnit.NewOrderControllerTest.get" />
-        <item itemvalue="JUnit.NewOrderControllerTest.update" />
       </list>
     </recent_temporary>
   </component>
@@ -553,13 +776,11 @@
       <workItem from="1527153031795" duration="10077000" />
       <workItem from="1527163186189" duration="3975000" />
       <workItem from="1527169302496" duration="108000" />
+      <workItem from="1527170703884" duration="1004000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="NewOrderControllerTest - 2018.05.24 at 14h 43m 10s.xml">
-      <configuration name="NewOrderControllerTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="NewOrderControllerTest - 2018.05.24 at 14h 52m 39s.xml">
       <configuration name="NewOrderControllerTest" configurationId="JUnit" />
     </history-entry>
@@ -587,9 +808,12 @@
     <history-entry file="com_igt_mapper_controllerTests_in_exercise5 - 2018.05.24 at 15h 05m 28s.xml">
       <configuration name="com.igt.mapper.controllerTests in exercise5" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_exercise5 - 2018.05.24 at 16h 21m 27s.xml">
+      <configuration name="All in exercise5" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84463000" />
+    <option name="totallyTimeSpent" value="85467000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -615,6 +839,7 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39902082" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32925338" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32925338" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
@@ -623,7 +848,7 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.32925338" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.329718" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32925338" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49635038" visible="true" weight="0.2883232" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49635038" visible="true" weight="0.29164362" />
       <window_info anchor="right" id="Bean Validation" order="9" side_tool="true" weight="0.32982844" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="8" />
@@ -631,7 +856,6 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32925338" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32925338" />
@@ -639,9 +863,10 @@
     <layout-to-restore>
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32925338" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.329718" />
       <window_info id="Image Layers" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32925338" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32925338" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -666,9 +891,8 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32925338" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39902082" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -781,38 +1005,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller_old/CompanyController_old.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller_old/DistrictController_old.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/com/igt/mapper/controller/WarehouseControllerTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Warehouse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/District.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/controller/DistrictController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-14">
           <caret line="89" column="17" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="35" column="25" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="35" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -837,13 +1033,6 @@
             <element signature="method#createREST#0;class#OrderController#0" />
             <element signature="method#deleteREST#0;class#OrderController#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/OrderLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="37" column="25" selection-start-line="36" selection-start-column="18" selection-end-line="37" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -876,20 +1065,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="23" column="57" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/NewOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
@@ -998,7 +1173,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/igt/mapper/controllerTests/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
+        <state relative-caret-position="330">
           <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1010,6 +1185,59 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="76" selection-start-line="4" selection-start-column="76" selection-end-line="4" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/District.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/OrderLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Warehouse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/NewOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/igt/mapper/model/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+          <folding>
+            <element signature="e#515#516#0" expanded="true" />
+            <element signature="e#542#543#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

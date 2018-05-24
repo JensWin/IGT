@@ -8,7 +8,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Indexed
+@Indexed(index="indexes/item")
 @Table(name = "ITEM")
 public class Item implements Serializable {
     @Id

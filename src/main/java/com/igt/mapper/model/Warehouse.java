@@ -7,7 +7,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Indexed
+@Indexed(index="indexes/warehouse")
 @Table(name = "WAREHOUSE")
 public class Warehouse implements Serializable {
 
