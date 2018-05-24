@@ -14,40 +14,38 @@ public class Order implements Serializable {
     @Id
     @GeneratedValue(generator="uuid")
     @GenericGenerator(name="uuid", strategy = "uuid2")
-    @Column(name="C_ID", updatable = false, nullable = false)
-    private String C_ID;
-    public String getC_ID() {
-        return C_ID;
+    @Column(name="O_ID", updatable = false, nullable = false)
+    private String O_ID;
+    public String getID() {
+        return O_ID;
     }
-    public void setC_ID(String c_ID) {
-        C_ID = c_ID;
-    }
+    public void setID(String O_ID) { this.O_ID = O_ID; }
 
     @Column
-    private String C_NAME;
-    public String getC_NAME() {
-        return C_NAME;
+    private String O_NAME;
+    public String getNAME() {
+        return O_NAME;
     }
-    public void setC_NAME(String c_UNAME) {
-        C_NAME = c_UNAME;
+    public void setNAME(String O_NAME) {
+        this.O_NAME = O_NAME;
     }
 
-    private Date C_Date;
-    public Date getC_Date() {
-        return C_Date;
+    private Date O_Date;
+    public Date getDate() {
+        return O_Date;
     }
-    public void setC_Date(Date C_Date) {
-        this.C_Date = C_Date;
+    public void setDate(Date O_Date) {
+        this.O_Date = O_Date;
     }
 
     @ManyToOne
     @JoinColumn(name="C_ID")
-    private Customer C_CUSTOMER;
-    public Customer getC_CUSTOMER() {
-        return C_CUSTOMER;
+    private Customer O_CUSTOMER;
+    public Customer getCUSTOMER() {
+        return O_CUSTOMER;
     }
-    public void setC_CUSTOMER(Customer C_CUSTOMER) {
-        this.C_CUSTOMER = C_CUSTOMER;
+    public void setCUSTOMER(Customer O_CUSTOMER) {
+        this.O_CUSTOMER = O_CUSTOMER;
     }
 
     public Order()

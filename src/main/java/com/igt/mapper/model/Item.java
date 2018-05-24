@@ -14,40 +14,40 @@ public class Item implements Serializable {
     @Id
     @GeneratedValue(generator="uuid")
     @GenericGenerator(name="uuid", strategy = "uuid2")
-    @Column(name="C_ID", updatable = false, nullable = false)
-    private String C_ID;
-    public String getC_ID() {
-        return C_ID;
+    @Column(name="I_ID", updatable = false, nullable = false)
+    private String I_ID;
+    public String getID() {
+        return I_ID;
     }
-    public void setC_ID(String c_ID) {
-        C_ID = c_ID;
+    public void setID(String I_ID) {
+        this.I_ID = I_ID;
     }
 
     @Column
-    private String C_NAME;
-    public String getC_NAME() {
-        return C_NAME;
+    private String I_NAME;
+    public String getNAME() {
+        return I_NAME;
     }
-    public void setC_NAME(String c_UNAME) {
-        C_NAME = c_UNAME;
+    public void setNAME(String I_NAME) {
+        this.I_NAME = I_NAME;
     }
 
-    private int C_STOCK;
-    public int getC_STOCK() {
-        return C_STOCK;
+    private int I_STOCK;
+    public int getSTOCK() {
+        return I_STOCK;
     }
-    public void setC_STOCK(int C_STOCK) {
-        this.C_STOCK = C_STOCK;
+    public void setSTOCK(int I_STOCK) {
+        this.I_STOCK = I_STOCK;
     }
 
     @ManyToOne
-    @JoinColumn(name="C_ID")
-    private Warehouse C_WAREHOUSE;
-    public Warehouse getC_WAREHOUSE() {
-        return C_WAREHOUSE;
+    @JoinColumn(name="W_ID")
+    private Warehouse I_WAREHOUSE;
+    public Warehouse getWAREHOUSE() {
+        return I_WAREHOUSE;
     }
-    public void setC_WAREHOUSE(Warehouse C_WAREHOUSE) {
-        this.C_WAREHOUSE = C_WAREHOUSE;
+    public void setWAREHOUSE(Warehouse I_WAREHOUSE) {
+        this.I_WAREHOUSE = I_WAREHOUSE;
     }
 
     public Item()

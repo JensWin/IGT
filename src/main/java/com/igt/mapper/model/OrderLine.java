@@ -14,33 +14,33 @@ public class OrderLine implements Serializable {
     @Id
     @GeneratedValue(generator="uuid")
     @GenericGenerator(name="uuid", strategy = "uuid2")
-    @Column(name="C_ID", updatable = false, nullable = false)
-    private String C_ID;
-    public String getC_ID() {
-        return C_ID;
+    @Column(name="OL_ID", updatable = false, nullable = false)
+    private String OL_ID;
+    public String getID() {
+        return OL_ID;
     }
-    public void setC_ID(String c_ID) {
-        C_ID = c_ID;
-    }
-
-    @ManyToOne
-    @JoinColumn(name="C_ID")
-    private  Order C_ORDER;
-    public Order getC_ORDER() {
-        return C_ORDER;
-    }
-    public void setC_ORDER(Order C_ORDER) {
-        this.C_ORDER = C_ORDER;
+    public void setID(String OL_ID) {
+        this.OL_ID = OL_ID;
     }
 
     @ManyToOne
-    @JoinColumn(name="C_ID")
-    private Item C_ITEM;
-    public Item getC_ITEM() {
-        return C_ITEM;
+    @JoinColumn(name="O_ID")
+    private  Order OL_ORDER;
+    public Order getORDER() {
+        return OL_ORDER;
     }
-    public void setC_ITEM(Item C_ITEM) {
-        this.C_ITEM = C_ITEM;
+    public void setORDER(Order OL_ORDER) {
+        this.OL_ORDER = OL_ORDER;
+    }
+
+    @ManyToOne
+    @JoinColumn(name="I_ID")
+    private Item OL_ITEM;
+    public Item getITEM() {
+        return OL_ITEM;
+    }
+    public void setITEM(Item OL_ITEM) {
+        this.OL_ITEM = OL_ITEM;
     }
 
     public OrderLine()

@@ -14,33 +14,23 @@ public class District implements Serializable {
     @Id
     @GeneratedValue(generator="uuid")
     @GenericGenerator(name="uuid", strategy = "uuid2")
-    @Column(name="C_ID", updatable = false, nullable = false)
-    private String C_ID;
-    public String getC_ID() {
-        return C_ID;
+    @Column(name="D_ID", updatable = false, nullable = false)
+    private String D_ID;
+    public String getID() {
+        return D_ID;
     }
-    public void setC_ID(String c_ID) {
-        C_ID = c_ID;
+    public void setID(String D_ID) {
+        this.D_ID = D_ID;
     }
 
 
     @Column
-    private String C_NAME;
-    public String getC_NAME() {
-        return C_NAME;
+    private String D_NAME;
+    public String getNAME() {
+        return D_NAME;
     }
-    public void setC_NAME(String c_NAME) {
-        C_NAME = c_NAME;
-    }
-
-    @ManyToOne
-    @JoinColumn(name="C_ID")
-    private Warehouse C_WAREHOUSE;
-    public Warehouse getC_WAREHOUSE() {
-        return C_WAREHOUSE;
-    }
-    public void setC_WAREHOUSE(Warehouse C_WAREHOUSE) {
-        this.C_WAREHOUSE = C_WAREHOUSE;
+    public void setNAME(String D_NAME) {
+        this.D_NAME = D_NAME;
     }
 
 

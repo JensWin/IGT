@@ -1,58 +1,74 @@
 package com.igt.mapper.controller;
 
-
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.Query;
-import javax.transaction.*;
 import com.igt.mapper.Config;
 import com.igt.mapper.DatabaseController;
 import com.igt.mapper.model.Customer;
 import com.igt.mapper.model.District;
+import com.igt.mapper.model.Warehouse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
-import static java.nio.file.StandardOpenOption.APPEND;
-import static java.nio.file.StandardOpenOption.CREATE;
-
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.transaction.*;
 
 @Controller
 @RequestMapping("/customer")
 public class CustomerController {
 
-    @RequestMapping(value="/update", method = RequestMethod.GET)
-    public void updateCustomer(@RequestParam(value ="name", required = false) String name,
-                               @RequestParam(value ="pw", required = false) String pw,
-                               @RequestParam(value ="district", required = false) String District_ID,
-                               @RequestParam(value ="id", required = true) String id) {
+    Customer toSet;
+
+    public Customer update(String name, String pw, String id, String ref) {
         EntityManagerFactory emf = DatabaseController.emf;
-        TransactionManager tm = DatabaseController.tm;
+        TransactionManager tm = DatabaseController.getTm();
 
         try {
-
-            Customer ToUpdate = getCustomer(id);
-
-            if(name!=null) ToUpdate.setC_NAME(name);
-            if(pw!=null) ToUpdate.setC_PASSWD(pw);
-
+            toSet = get(id);
+            toSet.setNAME(name);
+            toSet.setPASSWD(pw);
             EntityManager em = emf.createEntityManager();
             tm.begin();
-            if(District_ID!=null)
-                ToUpdate.setC_DISTRICT(em.find(District.class, District_ID));
-            em.merge(ToUpdate);
+            toSet.setDISTRICT(em.find(District.class, ref));
+            em.merge(toSet);
 
             em.flush();
             em.close();
             tm.commit();
 
 
+        } catch (NotSupportedException e) {
+            e.printStackTrace();
+            return null;
+        } catch (SystemException e) {
+            e.printStackTrace();
+            return null;
+        } catch (HeuristicMixedException e) {
+            e.printStackTrace();
+            return null;
+        } catch (HeuristicRollbackException e) {
+            e.printStackTrace();
+            return null;
+        } catch (RollbackException e) {
+            e.printStackTrace();
+            return null;
+        }
+        return toSet;
+    }
+
+    public Customer get(String id) {
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.getTm();
+        toSet = null;
+
+        try {
+            EntityManager em = emf.createEntityManager();
+            tm.begin();
+
+            toSet = em.find(Customer.class, id);
+
+            em.flush();
+            em.close();
+            tm.commit();
         } catch (NotSupportedException e) {
             e.printStackTrace();
         } catch (SystemException e) {
@@ -64,203 +80,117 @@ public class CustomerController {
         } catch (RollbackException e) {
             e.printStackTrace();
         }
+        return toSet;
+    }
 
+    public Customer create(String name, String pw, String ref) {
+
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.getTm();
+
+        toSet = new Customer();
+        toSet.setNAME(name);
+        toSet.setPASSWD(pw);
+        try {
+
+            EntityManager em = emf.createEntityManager();
+            tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
+            tm.begin();
+            toSet.setDISTRICT(em.find(District.class,ref));
+            em.persist(toSet);
+            em.flush();
+            em.close();
+            tm.commit();
+
+        } catch (NotSupportedException e) {
+            e.printStackTrace();
+            return null;
+        } catch (SystemException e) {
+            e.printStackTrace();
+            return null;
+        } catch (HeuristicMixedException e) {
+            e.printStackTrace();
+            return null;
+        } catch (HeuristicRollbackException e) {
+            e.printStackTrace();
+            return null;
+        } catch (RollbackException e) {
+            e.printStackTrace();
+            return null;
+        }
+
+        return toSet;
+
+    }
+
+    public boolean delete(String id){
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.getTm();
+        try {
+            EntityManager em = emf.createEntityManager();
+            tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
+            tm.begin();
+
+            toSet = em.find(Customer.class, id);
+
+            em.remove(toSet);
+
+            em.flush();
+            em.close();
+            tm.commit();
+
+        } catch (NotSupportedException e) {
+            e.printStackTrace();
+            return false;
+        } catch (SystemException e) {
+            e.printStackTrace();
+            return false;
+        } catch (HeuristicMixedException e) {
+            e.printStackTrace();
+            return false;
+        } catch (HeuristicRollbackException e) {
+            e.printStackTrace();
+            return false;
+        } catch (RollbackException e) {
+            e.printStackTrace();
+            return false;
+        }
+
+        return true;
+    }
+
+
+
+
+    @RequestMapping(value="/update", method = RequestMethod.PUT)
+    public Customer updateREST(@RequestParam(value ="name", required = true) String name,
+                               @RequestParam(value ="id", required = true) String id,
+                               @RequestParam(value ="pw", required = true) String pw,
+                               @RequestParam(value ="district", required = true) String ref) {
+        return update(name,pw,id,ref);
     }
 
     @RequestMapping(value="/get/{id}", method = RequestMethod.GET)
     public @ResponseBody
-    Customer getCustomer(@PathVariable(value = "id", required = true) String id) {
-        EntityManagerFactory emf = DatabaseController.emf;
-        TransactionManager tm = DatabaseController.tm;
+    Customer getREST(@PathVariable(value = "id", required = true) String id) {
 
-        Customer cust = null;
-
-
-        try {
-            EntityManager em = emf.createEntityManager();
-            tm.begin();
-
-            cust = em.find(Customer.class, id);
-
-            em.flush();
-            em.close();
-            tm.commit();
-
-
-        } catch (NotSupportedException e) {
-            e.printStackTrace();
-        } catch (SystemException e) {
-            e.printStackTrace();
-        } catch (HeuristicMixedException e) {
-            e.printStackTrace();
-        } catch (HeuristicRollbackException e) {
-            e.printStackTrace();
-        } catch (RollbackException e) {
-            e.printStackTrace();
-        }
-
-        return cust;
-
+        return get(id);
     }
 
     @RequestMapping(value = "/create", method = RequestMethod.GET)
     public @ResponseBody
-    void createCustomers(@RequestParam(value ="name", required = true) String name,
-                         @RequestParam(value ="pw", required = true) String pw,
-                         @RequestParam(value ="district", required = true) String District_ID){
-        EntityManagerFactory emf = DatabaseController.emf;
-        TransactionManager tm = DatabaseController.tm;
+    Customer createREST(@RequestParam(value ="name", required = true) String name,
+                        @RequestParam(value ="pw", required = true) String pw,
+                        @RequestParam(value ="district", required = true) String ref) {
 
-
-        Customer customer1 = new Customer();
-
-        customer1.setC_NAME(name);
-        customer1.setC_PASSWD(pw);
-
-        try {
-            EntityManager em = emf.createEntityManager();
-            tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
-            tm.begin();
-
-            District c = em.find(District.class,District_ID);
-            customer1.setC_DISTRICT(c);
-            em.persist(customer1);
-
-
-            em.flush();
-            em.close();
-            tm.commit();
-
-
-        } catch (NotSupportedException e) {
-            e.printStackTrace();
-        } catch (SystemException e) {
-            e.printStackTrace();
-        } catch (HeuristicMixedException e) {
-            e.printStackTrace();
-        } catch (HeuristicRollbackException e) {
-            e.printStackTrace();
-        } catch (RollbackException e) {
-            e.printStackTrace();
-        }
-
+        return create(name,pw,ref);
     }
 
-    @RequestMapping(value="/delete", method = RequestMethod.GET)
+    @RequestMapping(value="/delete", method = RequestMethod.DELETE)
     public @ResponseBody
-    void deleteCustomer(@RequestParam(value = "id") String id){
-        EntityManagerFactory emf = DatabaseController.emf;
-        TransactionManager tm = DatabaseController.tm;
-        try {
-            EntityManager em = emf.createEntityManager();
-            tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
-            tm.begin();
+    boolean deleteREST(@RequestParam(value = "id") String id){
 
-            Customer cust = em.find(Customer.class, id);
-
-            em.remove(cust);
-
-            em.flush();
-            em.close();
-            tm.commit();
-
-        } catch (NotSupportedException e) {
-            e.printStackTrace();
-        } catch (SystemException e) {
-            e.printStackTrace();
-        } catch (HeuristicMixedException e) {
-            e.printStackTrace();
-        } catch (HeuristicRollbackException e) {
-            e.printStackTrace();
-        } catch (RollbackException e) {
-            e.printStackTrace();
-        }
-
+        return delete(id);
     }
-
-
-    @RequestMapping(value="/getAllIds", method = RequestMethod.GET)
-    public @ResponseBody
-    List<String> getCustomerIds(){
-        EntityManagerFactory emf = DatabaseController.emf;
-        TransactionManager tm = DatabaseController.tm;
-        List<Customer> allCustomers = new ArrayList<Customer>();
-        List<String> customerIdz = new ArrayList<String>();
-
-        try {
-            EntityManager em = emf.createEntityManager();
-
-            String queryString = new String("SELECT c FROM Customer c");
-
-            tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
-            tm.begin();
-
-            Query q = em.createQuery(queryString);
-            allCustomers = q.getResultList();
-
-            for(Customer c : allCustomers){
-                customerIdz.add(c.getC_ID());
-            }
-
-            em.flush();
-            em.close();
-            tm.commit();
-
-
-        } catch (NotSupportedException e) {
-            e.printStackTrace();
-        } catch (SystemException e) {
-            e.printStackTrace();
-        } catch (HeuristicMixedException e) {
-            e.printStackTrace();
-        } catch (HeuristicRollbackException e) {
-            e.printStackTrace();
-        } catch (RollbackException e) {
-            e.printStackTrace();
-        }
-
-        return customerIdz;
-    }
-
-    @RequestMapping(value="/getAll", method = RequestMethod.GET)
-    public @ResponseBody
-    List<Customer> getCustomers(){
-        EntityManagerFactory emf = DatabaseController.emf;
-        TransactionManager tm = DatabaseController.tm;
-        List<Customer> allCustomers = new ArrayList<Customer>();
-        List<Integer> customerIdz = new ArrayList<Integer>();
-
-        try {
-            EntityManager em = emf.createEntityManager();
-
-            String queryString = new String("SELECT c FROM Customer c");
-
-            tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
-            tm.begin();
-
-            Query q = em.createQuery(queryString);
-            allCustomers = q.getResultList();
-
-
-            em.flush();
-            em.close();
-            tm.commit();
-
-
-        } catch (NotSupportedException e) {
-            e.printStackTrace();
-        } catch (SystemException e) {
-            e.printStackTrace();
-        } catch (HeuristicMixedException e) {
-            e.printStackTrace();
-        } catch (HeuristicRollbackException e) {
-            e.printStackTrace();
-        } catch (RollbackException e) {
-            e.printStackTrace();
-        }
-
-        return allCustomers;
-    }
-
 
 }

@@ -15,24 +15,24 @@ public class NewOrder implements Serializable{
     @Id
     @GeneratedValue(generator="uuid")
     @GenericGenerator(name="uuid", strategy = "uuid2")
-    @Column(name="C_ID", updatable = false, nullable = false)
-    private String C_ID;
-    public String getC_ID() {
-        return C_ID;
+    @Column(name="NO_ID", updatable = false, nullable = false)
+    private String NO_ID;
+    public String getID() {
+        return NO_ID;
     }
-    public void setC_ID(String c_ID) {
-        C_ID = c_ID;
+    public void setID(String NO_ID) {
+        this.NO_ID = NO_ID;
     }
 
 
     @ManyToOne
-    @JoinColumn(name="C_ID")
-    private Order C_ORDER;
-    public Order getC_ORDER() {
-        return C_ORDER;
+    @JoinColumn(name="O_ID")
+    private Order NO_ORDER;
+    public Order getORDER() {
+        return NO_ORDER;
     }
-    public void setC_ORDER(Order C_ORDER) {
-        this.C_ORDER = C_ORDER;
+    public void setORDER(Order NO_ORDER) {
+        this.NO_ORDER = NO_ORDER;
     }
 
 

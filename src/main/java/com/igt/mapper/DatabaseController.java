@@ -1,5 +1,6 @@
 package com.igt.mapper;
 
+import org.apache.catalina.mapper.Mapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,54 +19,54 @@ public class DatabaseController {
     public static EntityManagerFactory emf = Persistence.createEntityManagerFactory(Config.PERSISTENCE_UNIT_NAME);
 
     @RequestMapping(value="/mysql", method = RequestMethod.GET)
-    public @ResponseBody void changeDB_mysql(){
+    public static @ResponseBody void changeDB_mysql(){
         close();
         Config.PERSISTENCE_UNIT_NAME = Config.PERSISTENCE_UNITS.OGM_MYSQL.name();
         emf = Persistence.createEntityManagerFactory(Config.PERSISTENCE_UNIT_NAME);
     }
     @RequestMapping(value="/postgres", method = RequestMethod.GET)
-    public @ResponseBody void changeDB_postgres(){
+    public static @ResponseBody void changeDB_postgres(){
         close();
         Config.PERSISTENCE_UNIT_NAME = Config.PERSISTENCE_UNITS.OGM_POSTGRESQL.name();
         emf = Persistence.createEntityManagerFactory(Config.PERSISTENCE_UNIT_NAME);
     }
     @RequestMapping(value="/cassandra", method = RequestMethod.GET)
-    public @ResponseBody void changeDB_cassandra(){
+    public static @ResponseBody void changeDB_cassandra(){
         close();
         Config.PERSISTENCE_UNIT_NAME = Config.PERSISTENCE_UNITS.OGM_CASSANDRA.name();
         emf = Persistence.createEntityManagerFactory(Config.PERSISTENCE_UNIT_NAME);
     }
     @RequestMapping(value="/mongodb", method = RequestMethod.GET)
-    public @ResponseBody void changeDB_mongodb(){
+    public static @ResponseBody void changeDB_mongodb(){
         close();
         Config.PERSISTENCE_UNIT_NAME = Config.PERSISTENCE_UNITS.OGM_MONGODB.name();
         emf = Persistence.createEntityManagerFactory(Config.PERSISTENCE_UNIT_NAME);
     }
     @RequestMapping(value="/neo4j", method = RequestMethod.GET)
-    public @ResponseBody void changeDB(){
+    public static @ResponseBody void changeDB_neo4j(){
         close();
         Config.PERSISTENCE_UNIT_NAME = Config.PERSISTENCE_UNITS.OGM_NEO4J.name();
         emf = Persistence.createEntityManagerFactory(Config.PERSISTENCE_UNIT_NAME);
     }
     @RequestMapping(value="/redis", method = RequestMethod.GET)
-    public @ResponseBody void changeDB_redis(){
+    public static @ResponseBody void changeDB_redis(){
         close();
         Config.PERSISTENCE_UNIT_NAME = Config.PERSISTENCE_UNITS.OGM_REDIS.name();
         emf = Persistence.createEntityManagerFactory(Config.PERSISTENCE_UNIT_NAME);
     }
     @RequestMapping(value="/infinispan", method = RequestMethod.GET)
-    public @ResponseBody void changeDB_infinispan(){
+    public static @ResponseBody void changeDB_infinispan(){
         close();
         Config.PERSISTENCE_UNIT_NAME = Config.PERSISTENCE_UNITS.OGM_INFINISPAN.name();
         emf = Persistence.createEntityManagerFactory(Config.PERSISTENCE_UNIT_NAME);
     }
 
     @RequestMapping(value="/close", method = RequestMethod.GET)
-    public @ResponseBody void changeDB_close(){
+    public static @ResponseBody void changeDB_close(){
         emf.close();
     }
 
-    public void close(){
+    public static void close(){
         try {
             emf.close();
         }
@@ -74,4 +75,8 @@ public class DatabaseController {
         }
     }
 
+    public static TransactionManager getTm(){
+        tm = com.arjuna.ats.jta.TransactionManager.transactionManager();
+        return tm;
+    }
 }

@@ -14,33 +14,31 @@ public class Warehouse implements Serializable {
     @Id
     @GeneratedValue(generator="uuid")
     @GenericGenerator(name="uuid", strategy = "uuid2")
-    @Column(name="C_ID", updatable = false, nullable = false)
-    private String C_ID;
-    public String getC_ID() {
-        return C_ID;
-    }
-    public void setC_ID(String c_ID) {
-        C_ID = c_ID;
+    @Column(name="W_ID", updatable = false, nullable = false)
+    private String W_ID;
+    public String getID() { return W_ID; }
+    public void setID(String W_ID) {
+        this.W_ID = W_ID;
     }
 
 
     @Column
-    private String C_NAME;
-    public String getC_NAME() {
-        return C_NAME;
+    private String W_NAME;
+    public String getNAME() {
+        return W_NAME;
     }
-    public void setC_NAME(String c_NAME) {
-        C_NAME = c_NAME;
+    public void setNAME(String W_NAME) {
+        this.W_NAME = W_NAME;
     }
 
     @ManyToOne
-    @JoinColumn(name="C_ID")
-    private Company C_COMPANY;
-    public Company getC_COMPANY() {
-        return C_COMPANY;
+    @JoinColumn(name="D_ID")
+    private District W_DISTRICT;
+    public District getDISTRICT() {
+        return W_DISTRICT;
     }
-    public void setC_COMPANY(Company C_COMPANY) {
-        this.C_COMPANY = C_COMPANY;
+    public void setDISTRICT(District W_DISTRICT) {
+        this.W_DISTRICT = W_DISTRICT;
     }
 
 

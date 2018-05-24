@@ -2,50 +2,73 @@ package com.igt.mapper.controller;
 
 import com.igt.mapper.Config;
 import com.igt.mapper.DatabaseController;
-import com.igt.mapper.model.*;
+import com.igt.mapper.model.District;
+import com.igt.mapper.model.Item;
+import com.igt.mapper.model.Warehouse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.Query;
 import javax.transaction.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Controller
 @RequestMapping("/item")
 public class ItemController {
 
+    Item toSet;
 
-    @RequestMapping(value="/update", method = RequestMethod.GET)
-    public void updateItem(@RequestParam(value ="name", required = false) String name,
-                           @RequestParam(value ="warehouse", required = false) String Warehouse_ID,
-                           @RequestParam(value ="stock", required = true) String stock,
-                           @RequestParam(value ="id", required = true) String id) {
+    public Item update(String name,int stock, String id, String ref) {
         EntityManagerFactory emf = DatabaseController.emf;
-        TransactionManager tm = DatabaseController.tm;
-        try {
-            Item ToUpdate = getItem(id);
+        TransactionManager tm = DatabaseController.getTm();
 
-            if(name!=null) ToUpdate.setC_NAME(name);
-            if(stock!=null) {
-                ToUpdate.setC_STOCK(Integer.parseInt(stock));
-            }else{
-                ToUpdate.setC_STOCK(0);
-            }
+        try {
+            toSet = get(id);
+            toSet.setNAME(name);
+            toSet.setSTOCK(stock);
             EntityManager em = emf.createEntityManager();
             tm.begin();
-            if(Warehouse_ID!=null)
-                ToUpdate.setC_WAREHOUSE(em.find(Warehouse.class, Warehouse_ID));
-            em.merge(ToUpdate);
+            toSet.setWAREHOUSE(em.find(Warehouse.class, ref));
+            em.merge(toSet);
 
             em.flush();
             em.close();
             tm.commit();
 
 
+        } catch (NotSupportedException e) {
+            e.printStackTrace();
+            return null;
+        } catch (SystemException e) {
+            e.printStackTrace();
+            return null;
+        } catch (HeuristicMixedException e) {
+            e.printStackTrace();
+            return null;
+        } catch (HeuristicRollbackException e) {
+            e.printStackTrace();
+            return null;
+        } catch (RollbackException e) {
+            e.printStackTrace();
+            return null;
+        }
+        return toSet;
+    }
+
+    public Item get(String id) {
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.getTm();
+        toSet = null;
+
+        try {
+            EntityManager em = emf.createEntityManager();
+            tm.begin();
+
+            toSet = em.find(Item.class, id);
+
+            em.flush();
+            em.close();
+            tm.commit();
         } catch (NotSupportedException e) {
             e.printStackTrace();
         } catch (SystemException e) {
@@ -57,189 +80,116 @@ public class ItemController {
         } catch (RollbackException e) {
             e.printStackTrace();
         }
+        return toSet;
+    }
 
+    public Item create(String name, int stock, String ref) {
+
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.getTm();
+
+        toSet = new Item();
+        toSet.setNAME(name);
+        toSet.setSTOCK(stock);
+
+        try {
+
+            EntityManager em = emf.createEntityManager();
+            tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
+            tm.begin();
+            toSet.setWAREHOUSE(em.find(Warehouse.class,ref));
+            em.persist(toSet);
+            em.flush();
+            em.close();
+            tm.commit();
+
+        } catch (NotSupportedException e) {
+            e.printStackTrace();
+            return null;
+        } catch (SystemException e) {
+            e.printStackTrace();
+            return null;
+        } catch (HeuristicMixedException e) {
+            e.printStackTrace();
+            return null;
+        } catch (HeuristicRollbackException e) {
+            e.printStackTrace();
+            return null;
+        } catch (RollbackException e) {
+            e.printStackTrace();
+            return null;
+        }
+
+        return toSet;
+
+    }
+
+    public boolean delete(String id){
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.getTm();
+        try {
+            EntityManager em = emf.createEntityManager();
+            tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
+            tm.begin();
+
+            toSet = em.find(Item.class, id);
+
+            em.remove(toSet);
+
+            em.flush();
+            em.close();
+            tm.commit();
+
+        } catch (NotSupportedException e) {
+            e.printStackTrace();
+            return false;
+        } catch (SystemException e) {
+            e.printStackTrace();
+            return false;
+        } catch (HeuristicMixedException e) {
+            e.printStackTrace();
+            return false;
+        } catch (HeuristicRollbackException e) {
+            e.printStackTrace();
+            return false;
+        } catch (RollbackException e) {
+            e.printStackTrace();
+            return false;
+        }
+
+        return true;
+    }
+
+
+    @RequestMapping(value="/update", method = RequestMethod.PUT)
+    public Item updateREST(@RequestParam(value ="name", required = true) String name,
+                           @RequestParam(value ="id", required = true) String id,
+                           @RequestParam(value ="stock", required = true) int stock,
+                           @RequestParam(value ="warehouse", required = true) String ref) {
+        return update(name,stock,id,ref);
     }
 
     @RequestMapping(value="/get/{id}", method = RequestMethod.GET)
     public @ResponseBody
-    Item getItem(@PathVariable(value = "id", required = true) String id) {
-        EntityManagerFactory emf = DatabaseController.emf;
-        TransactionManager tm = DatabaseController.tm;
-        Item item = null;
+    Item getREST(@PathVariable(value = "id", required = true) String id) {
 
-        try {
-            EntityManager em = emf.createEntityManager();
-            tm.begin();
-
-            item = em.find(Item.class, id);
-
-            em.flush();
-            em.close();
-            tm.commit();
-        } catch (NotSupportedException e) {
-            e.printStackTrace();
-        } catch (SystemException e) {
-            e.printStackTrace();
-        } catch (HeuristicMixedException e) {
-            e.printStackTrace();
-        } catch (HeuristicRollbackException e) {
-            e.printStackTrace();
-        } catch (RollbackException e) {
-            e.printStackTrace();
-        }
-        return item;
+        return get(id);
     }
 
     @RequestMapping(value = "/create", method = RequestMethod.GET)
     public @ResponseBody
-    void createItem(@RequestParam(value ="name", required = true) String name,
-                    @RequestParam(value ="warehouse", required = true) String Warehouse_ID,
-                    @RequestParam(value ="stock", required = true) String stock) {
-        EntityManagerFactory emf = DatabaseController.emf;
-        TransactionManager tm = DatabaseController.tm;
-        Item item = new Item();
+    Item createREST(@RequestParam(value ="name", required = true) String name,
+                    @RequestParam(value ="warehouse", required = true) String ref,
+                    @RequestParam(value ="stock", required = true) int stock) {
 
-
-        item.setC_NAME(name);
-        item.setC_STOCK(Integer.parseInt(stock));
-
-        try {
-            EntityManager em = emf.createEntityManager();
-            tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
-            tm.begin();
-
-            Warehouse c = em.find(Warehouse.class,Warehouse_ID);
-            item.setC_WAREHOUSE(c);
-            System.out.println(c);
-            em.persist(item);
-
-            em.flush();
-            em.close();
-            tm.commit();
-        } catch (NotSupportedException e) {
-            e.printStackTrace();
-        } catch (SystemException e) {
-            e.printStackTrace();
-        } catch (HeuristicMixedException e) {
-            e.printStackTrace();
-        } catch (HeuristicRollbackException e) {
-            e.printStackTrace();
-        } catch (RollbackException e) {
-            e.printStackTrace();
-        }
-
+        return create(name,stock,ref);
     }
 
-    @RequestMapping(value="/delete", method = RequestMethod.GET)
+    @RequestMapping(value="/delete", method = RequestMethod.DELETE)
     public @ResponseBody
-    void deleteItem(@RequestParam(value = "id") String id){
-        EntityManagerFactory emf = DatabaseController.emf;
-        TransactionManager tm = DatabaseController.tm;
-        try {
-            EntityManager em = emf.createEntityManager();
-            tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
-            tm.begin();
+    boolean deleteREST(@RequestParam(value = "id") String id){
 
-            Item item = em.find(Item.class, id);
-
-            em.remove(item);
-
-            em.flush();
-            em.close();
-            tm.commit();
-
-        } catch (NotSupportedException e) {
-            e.printStackTrace();
-        } catch (SystemException e) {
-            e.printStackTrace();
-        } catch (HeuristicMixedException e) {
-            e.printStackTrace();
-        } catch (HeuristicRollbackException e) {
-            e.printStackTrace();
-        } catch (RollbackException e) {
-            e.printStackTrace();
-        }
-
+        return delete(id);
     }
 
-    @RequestMapping(value="/getAllIds", method = RequestMethod.GET)
-    public @ResponseBody
-    List<String> getIds(){
-        EntityManagerFactory emf = DatabaseController.emf;
-        TransactionManager tm = DatabaseController.tm;
-        List<Item> all = new ArrayList<Item>();
-        List<String> Ids = new ArrayList<String>();
-
-        try {
-            EntityManager em = emf.createEntityManager();
-
-            String queryString = new String("SELECT c FROM Item c");
-
-            tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
-            tm.begin();
-
-            Query q = em.createQuery(queryString);
-            all = q.getResultList();
-
-            for(Item c : all){
-                Ids.add(c.getC_ID());
-            }
-
-            em.flush();
-            em.close();
-            tm.commit();
-
-
-        } catch (NotSupportedException e) {
-            e.printStackTrace();
-        } catch (SystemException e) {
-            e.printStackTrace();
-        } catch (HeuristicMixedException e) {
-            e.printStackTrace();
-        } catch (HeuristicRollbackException e) {
-            e.printStackTrace();
-        } catch (RollbackException e) {
-            e.printStackTrace();
-        }
-
-        return Ids;
-    }
-
-    @RequestMapping(value="/getAll", method = RequestMethod.GET)
-    public @ResponseBody
-    List<Item> getItem(){
-        EntityManagerFactory emf = DatabaseController.emf;
-        TransactionManager tm = DatabaseController.tm;
-        List<Item> all = new ArrayList<Item>();
-
-
-        try {
-            EntityManager em = emf.createEntityManager();
-
-            String queryString = new String("SELECT c FROM Item c");
-
-            tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
-            tm.begin();
-
-            Query q = em.createQuery(queryString);
-            all = q.getResultList();
-
-            em.flush();
-            em.close();
-            tm.commit();
-
-        } catch (NotSupportedException e) {
-            e.printStackTrace();
-        } catch (SystemException e) {
-            e.printStackTrace();
-        } catch (HeuristicMixedException e) {
-            e.printStackTrace();
-        } catch (HeuristicRollbackException e) {
-            e.printStackTrace();
-        } catch (RollbackException e) {
-            e.printStackTrace();
-        }
-
-        return all;
-    }
 }

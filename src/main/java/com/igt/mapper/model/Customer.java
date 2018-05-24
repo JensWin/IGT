@@ -16,37 +16,37 @@ public class Customer implements Serializable {
     @GenericGenerator(name="uuid", strategy = "uuid2")
     @Column(name="C_ID", updatable = false, nullable = false)
     private String C_ID;
-    public String getC_ID() {
+    public String getID() {
         return C_ID;
     }
-    public void setC_ID(String c_ID) {
+    public void setID(String c_ID) {
         C_ID = c_ID;
     }
 
     @Column
     private String C_NAME;
-    public String getC_NAME() {
+    public String getNAME() {
         return C_NAME;
     }
-    public void setC_NAME(String C_NAME) {
+    public void setNAME(String C_NAME) {
         this.C_NAME = C_NAME;
     }
 
     @Column
     private String C_PASSWD;
-    public String getC_PASSWD() { return C_PASSWD; }
-    public void setC_PASSWD(String C_PASSWD) {
+    public String getPASSWD() { return C_PASSWD; }
+    public void setPASSWD(String C_PASSWD) {
         this.C_PASSWD = C_PASSWD;
     }
 
 
     @ManyToOne
-    @JoinColumn(name="C_ID")
+    @JoinColumn(name="D_ID")
     private District C_DISTRICT;
-    public District getC_DISTRICT() {
+    public District getDISTRICT() {
         return C_DISTRICT;
     }
-    public void setC_DISTRICT(District C_DISTRICT) {
+    public void setDISTRICT(District C_DISTRICT) {
         this.C_DISTRICT = C_DISTRICT;
     }
 

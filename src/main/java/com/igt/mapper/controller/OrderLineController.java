@@ -3,47 +3,72 @@ package com.igt.mapper.controller;
 import com.igt.mapper.Config;
 import com.igt.mapper.DatabaseController;
 import com.igt.mapper.model.Item;
+import com.igt.mapper.model.NewOrder;
 import com.igt.mapper.model.Order;
 import com.igt.mapper.model.OrderLine;
-import com.igt.mapper.model.Warehouse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.Query;
 import javax.transaction.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Controller
-@RequestMapping("/orderLine")
+@RequestMapping("/orderline")
 public class OrderLineController {
 
+    OrderLine toSet;
 
-
-    @RequestMapping(value="/update", method = RequestMethod.GET)
-    public void updateOrderLine(@RequestParam(value ="order", required = false) String Order_ID,
-                                @RequestParam(value ="item", required = false) String Item_ID,
-                                @RequestParam(value ="id", required = true) String id) {
+    public OrderLine update(String id, String ref1, String ref2) {
         EntityManagerFactory emf = DatabaseController.emf;
-        TransactionManager tm = DatabaseController.tm;
+        TransactionManager tm = DatabaseController.getTm();
+
         try {
-
-            OrderLine ToUpdate = getOrderLine(id);
-
+            toSet = get(id);
             EntityManager em = emf.createEntityManager();
             tm.begin();
-            if(Order_ID!=null) ToUpdate.setC_ORDER(em.find(Order.class, Order_ID));
-            if(Item_ID!=null) ToUpdate.setC_ITEM(em.find(Item.class, Item_ID));
-            em.merge(ToUpdate);
+            toSet.setORDER(em.find(Order.class, ref1));
+            toSet.setITEM(em.find(Item.class, ref2));
+            em.merge(toSet);
 
             em.flush();
             em.close();
             tm.commit();
 
 
+        } catch (NotSupportedException e) {
+            e.printStackTrace();
+            return null;
+        } catch (SystemException e) {
+            e.printStackTrace();
+            return null;
+        } catch (HeuristicMixedException e) {
+            e.printStackTrace();
+            return null;
+        } catch (HeuristicRollbackException e) {
+            e.printStackTrace();
+            return null;
+        } catch (RollbackException e) {
+            e.printStackTrace();
+            return null;
+        }
+        return toSet;
+    }
+
+    public OrderLine get(String id) {
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.getTm();
+        toSet = null;
+
+        try {
+            EntityManager em = emf.createEntityManager();
+            tm.begin();
+
+            toSet = em.find(OrderLine.class, id);
+
+            em.flush();
+            em.close();
+            tm.commit();
         } catch (NotSupportedException e) {
             e.printStackTrace();
         } catch (SystemException e) {
@@ -55,189 +80,114 @@ public class OrderLineController {
         } catch (RollbackException e) {
             e.printStackTrace();
         }
+        return toSet;
+    }
 
+    public OrderLine create(String ref1, String ref2) {
+
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.getTm();
+
+        toSet = new OrderLine();
+
+        try {
+
+            EntityManager em = emf.createEntityManager();
+            tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
+            tm.begin();
+            toSet.setORDER(em.find(Order.class,ref1));
+            toSet.setITEM(em.find(Item.class,ref2));
+            em.persist(toSet);
+            em.flush();
+            em.close();
+            tm.commit();
+
+        } catch (NotSupportedException e) {
+            e.printStackTrace();
+            return null;
+        } catch (SystemException e) {
+            e.printStackTrace();
+            return null;
+        } catch (HeuristicMixedException e) {
+            e.printStackTrace();
+            return null;
+        } catch (HeuristicRollbackException e) {
+            e.printStackTrace();
+            return null;
+        } catch (RollbackException e) {
+            e.printStackTrace();
+            return null;
+        }
+
+        return toSet;
+
+    }
+
+    public boolean delete(String id){
+        EntityManagerFactory emf = DatabaseController.emf;
+        TransactionManager tm = DatabaseController.getTm();
+        try {
+            EntityManager em = emf.createEntityManager();
+            tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
+            tm.begin();
+
+            toSet = em.find(OrderLine.class, id);
+
+            em.remove(toSet);
+
+            em.flush();
+            em.close();
+            tm.commit();
+
+        } catch (NotSupportedException e) {
+            e.printStackTrace();
+            return false;
+        } catch (SystemException e) {
+            e.printStackTrace();
+            return false;
+        } catch (HeuristicMixedException e) {
+            e.printStackTrace();
+            return false;
+        } catch (HeuristicRollbackException e) {
+            e.printStackTrace();
+            return false;
+        } catch (RollbackException e) {
+            e.printStackTrace();
+            return false;
+        }
+
+        return true;
+    }
+
+
+
+    @RequestMapping(value="/update", method = RequestMethod.PUT)
+    public OrderLine updateREST(@RequestParam(value ="id", required = true) String id,
+                                @RequestParam(value ="order", required = true) String ref1,
+                                @RequestParam(value ="item", required = true) String ref2) {
+        return update(id,ref1,ref2);
     }
 
     @RequestMapping(value="/get/{id}", method = RequestMethod.GET)
     public @ResponseBody
-    OrderLine getOrderLine(@PathVariable(value = "id", required = true) String id) {
-        EntityManagerFactory emf = DatabaseController.emf;
-        TransactionManager tm = DatabaseController.tm;
-        OrderLine orderLine = null;
+    OrderLine getREST(@PathVariable(value = "id", required = true) String id) {
 
-        try {
-            EntityManager em = emf.createEntityManager();
-            tm.begin();
-
-            orderLine = em.find(OrderLine.class, id);
-
-            em.flush();
-            em.close();
-            tm.commit();
-        } catch (NotSupportedException e) {
-            e.printStackTrace();
-        } catch (SystemException e) {
-            e.printStackTrace();
-        } catch (HeuristicMixedException e) {
-            e.printStackTrace();
-        } catch (HeuristicRollbackException e) {
-            e.printStackTrace();
-        } catch (RollbackException e) {
-            e.printStackTrace();
-        }
-        return orderLine;
+        return get(id);
     }
 
     @RequestMapping(value = "/create", method = RequestMethod.GET)
     public @ResponseBody
-    void createOrderLine(@RequestParam(value ="order", required = true) String Order_ID,
-                         @RequestParam(value ="item", required = true) String Item_ID) {
-        EntityManagerFactory emf = DatabaseController.emf;
-        TransactionManager tm = DatabaseController.tm;
-        OrderLine orderline = new OrderLine();
+    OrderLine createREST(@RequestParam(value ="order", required = true) String ref1,
+                         @RequestParam(value ="item", required = true) String ref2) {
 
-
-        try {
-            EntityManager em = emf.createEntityManager();
-            tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
-            tm.begin();
-
-            Order c = em.find(Order.class,Order_ID);
-            orderline.setC_ORDER(c);
-
-            Item i = em.find(Item.class,Item_ID);
-            orderline.setC_ITEM(i);
-
-            em.persist(orderline);
-
-            em.flush();
-            em.close();
-            tm.commit();
-        } catch (NotSupportedException e) {
-            e.printStackTrace();
-        } catch (SystemException e) {
-            e.printStackTrace();
-        } catch (HeuristicMixedException e) {
-            e.printStackTrace();
-        } catch (HeuristicRollbackException e) {
-            e.printStackTrace();
-        } catch (RollbackException e) {
-            e.printStackTrace();
-        }
-
+        return create(ref1,ref2);
     }
 
-    @RequestMapping(value="/delete", method = RequestMethod.GET)
+    @RequestMapping(value="/delete", method = RequestMethod.DELETE)
     public @ResponseBody
-    void deleteOrderLine(@RequestParam(value = "id") String id){
-        EntityManagerFactory emf = DatabaseController.emf;
-        TransactionManager tm = DatabaseController.tm;
-        try {
-            EntityManager em = emf.createEntityManager();
-            tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
-            tm.begin();
+    boolean deleteREST(@RequestParam(value = "id") String id){
 
-            OrderLine orderLine = em.find(OrderLine.class, id);
-
-            em.remove(orderLine);
-
-            em.flush();
-            em.close();
-            tm.commit();
-
-        } catch (NotSupportedException e) {
-            e.printStackTrace();
-        } catch (SystemException e) {
-            e.printStackTrace();
-        } catch (HeuristicMixedException e) {
-            e.printStackTrace();
-        } catch (HeuristicRollbackException e) {
-            e.printStackTrace();
-        } catch (RollbackException e) {
-            e.printStackTrace();
-        }
-
+        return delete(id);
     }
 
-
-    @RequestMapping(value="/getAllIds", method = RequestMethod.GET)
-    public @ResponseBody
-    List<String> getIds(){
-        EntityManagerFactory emf = DatabaseController.emf;
-        TransactionManager tm = DatabaseController.tm;
-        List<OrderLine> all = new ArrayList<OrderLine>();
-        List<String> Ids = new ArrayList<String>();
-
-        try {
-            EntityManager em = emf.createEntityManager();
-
-            String queryString = new String("SELECT c FROM OrderLine c");
-
-            tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
-            tm.begin();
-
-            Query q = em.createQuery(queryString);
-            all = q.getResultList();
-
-            for(OrderLine c : all){
-                Ids.add(c.getC_ID());
-            }
-
-            em.flush();
-            em.close();
-            tm.commit();
-
-
-        } catch (NotSupportedException e) {
-            e.printStackTrace();
-        } catch (SystemException e) {
-            e.printStackTrace();
-        } catch (HeuristicMixedException e) {
-            e.printStackTrace();
-        } catch (HeuristicRollbackException e) {
-            e.printStackTrace();
-        } catch (RollbackException e) {
-            e.printStackTrace();
-        }
-
-        return Ids;
-    }
-
-    @RequestMapping(value="/getAll", method = RequestMethod.GET)
-    public @ResponseBody
-    List<OrderLine> getItem(){
-        EntityManagerFactory emf = DatabaseController.emf;
-        TransactionManager tm = DatabaseController.tm;
-        List<OrderLine> all = new ArrayList<OrderLine>();
-
-
-        try {
-            EntityManager em = emf.createEntityManager();
-
-            String queryString = new String("SELECT c FROM OrderLine c");
-
-            tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
-            tm.begin();
-
-            Query q = em.createQuery(queryString);
-            all = q.getResultList();
-
-            em.flush();
-            em.close();
-            tm.commit();
-
-        } catch (NotSupportedException e) {
-            e.printStackTrace();
-        } catch (SystemException e) {
-            e.printStackTrace();
-        } catch (HeuristicMixedException e) {
-            e.printStackTrace();
-        } catch (HeuristicRollbackException e) {
-            e.printStackTrace();
-        } catch (RollbackException e) {
-            e.printStackTrace();
-        }
-
-        return all;
-    }
 }
