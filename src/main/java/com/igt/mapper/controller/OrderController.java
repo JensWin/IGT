@@ -166,8 +166,8 @@ public class OrderController {
     @RequestMapping(value="/update", method = RequestMethod.PUT)
     public Order updateREST(@RequestParam(value ="name", required = true) String name,
                            @RequestParam(value ="id", required = true) String id,
-                           @RequestParam(value ="stock", required = true) Date date,
-                           @RequestParam(value ="warehouse", required = true) String ref) {
+                           @RequestParam(value ="date", required = true) Date date,
+                           @RequestParam(value ="customer", required = true) String ref) {
         return update(name,date,id,ref);
     }
 
@@ -181,8 +181,8 @@ public class OrderController {
     @RequestMapping(value = "/create", method = RequestMethod.GET)
     public @ResponseBody
     Order createREST(@RequestParam(value ="name", required = true) String name,
-                    @RequestParam(value ="warehouse", required = true) String ref,
-                    @RequestParam(value ="stock", required = true) Date date) {
+                    @RequestParam(value ="customer", required = true) String ref,
+                    @RequestParam(value ="date", required = true) Date date) {
 
         return create(name,date,ref);
     }

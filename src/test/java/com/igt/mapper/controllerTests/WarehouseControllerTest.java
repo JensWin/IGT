@@ -17,29 +17,26 @@ import static org.junit.Assert.assertTrue;
 public class WarehouseControllerTest {
 
     private static Logger log = Logger.getAnonymousLogger();
-    private DistrictController refController;
     private WarehouseController controller;
-    private District ref;
+
 
     @Before
     public void before(){
         Database.changeDB();
-        refController = new DistrictController();
         controller = new WarehouseController();
-        ref =refController.create("ref");
     }
 
     @Test
     public void update() {
-        Warehouse before =controller.create("before", ref.getID());
-        Warehouse after = controller.update("update",before.getID(),ref.getID());
+        Warehouse before =controller.create("before");
+        Warehouse after = controller.update("update",before.getID());
         assertTrue(after.getNAME().equals("update"));
 
     }
 
     @Test
     public void get() {
-        Warehouse before =controller.create("get",ref.getID());
+        Warehouse before =controller.create("get");
         Warehouse after = controller.get(before.getID());
         assertTrue(after.getNAME().equals("get"));
 
@@ -47,13 +44,13 @@ public class WarehouseControllerTest {
 
     @Test
     public void create() {
-        Warehouse before =controller.create("create", ref.getID());
+        Warehouse before =controller.create("create");
         assertTrue(before.getNAME().equals("create"));
     }
 
     @Test
     public void delete() {
-        Warehouse before =controller.create("delete", ref.getID());
+        Warehouse before =controller.create("delete");
         assertTrue(controller.delete(before.getID())&& controller.get(before.getID())==null);
     }
 

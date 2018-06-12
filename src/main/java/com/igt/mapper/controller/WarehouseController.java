@@ -20,7 +20,7 @@ public class WarehouseController {
 
     Warehouse toSet;
 
-    public Warehouse update(String name, String id, String ref) {
+    public Warehouse update(String name, String id) {
         EntityManagerFactory emf = DatabaseController.emf;
         TransactionManager tm = DatabaseController.getTm();
 
@@ -29,7 +29,6 @@ public class WarehouseController {
             toSet.setNAME(name);
             EntityManager em = emf.createEntityManager();
             tm.begin();
-            toSet.setDISTRICT(em.find(District.class, ref));
             em.merge(toSet);
 
             em.flush();
@@ -84,7 +83,7 @@ public class WarehouseController {
         return toSet;
     }
 
-    public Warehouse create(String name, String ref) {
+    public Warehouse create(String name) {
 
         EntityManagerFactory emf = DatabaseController.emf;
         TransactionManager tm = DatabaseController.getTm();
@@ -97,7 +96,6 @@ public class WarehouseController {
             EntityManager em = emf.createEntityManager();
             tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
             tm.begin();
-            toSet.setDISTRICT(em.find(District.class,ref));
             em.persist(toSet);
             em.flush();
             em.close();
@@ -165,9 +163,8 @@ public class WarehouseController {
 
     @RequestMapping(value="/update", method = RequestMethod.PUT)
     public Warehouse updateREST(@RequestParam(value ="name", required = true) String name,
-                              @RequestParam(value ="id", required = true) String id,
-                              @RequestParam(value ="district", required = true) String ref) {
-        return update(name,id,ref);
+                              @RequestParam(value ="id", required = true) String id){
+        return update(name,id);
     }
 
     @RequestMapping(value="/get/{id}", method = RequestMethod.GET)
@@ -179,10 +176,9 @@ public class WarehouseController {
 
     @RequestMapping(value = "/create", method = RequestMethod.GET)
     public @ResponseBody
-    Warehouse createREST(@RequestParam(value ="name", required = true) String name,
-                         @RequestParam(value ="district", required = true) String ref) {
+    Warehouse createREST(@RequestParam(value ="name", required = true) String name){
 
-        return create(name,ref);
+        return create(name);
     }
 
     @RequestMapping(value="/delete", method = RequestMethod.DELETE)

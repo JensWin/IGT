@@ -1,14 +1,8 @@
 package com.igt.mapper.controllerTests;
 
 
-import com.igt.mapper.controller.CustomerController;
-import com.igt.mapper.controller.DistrictController;
-import com.igt.mapper.controller.NewOrderController;
-import com.igt.mapper.controller.OrderController;
-import com.igt.mapper.model.Customer;
-import com.igt.mapper.model.District;
-import com.igt.mapper.model.NewOrder;
-import com.igt.mapper.model.Order;
+import com.igt.mapper.controller.*;
+import com.igt.mapper.model.*;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -32,13 +26,18 @@ public class NewOrderControllerTest {
     private Order ref1;
     private Order ref2 ;
 
+    private WarehouseController warehouseController;
+    private Warehouse warehouse;
+
     @Before
     public void before(){
         Database.changeDB();
+        warehouseController = new WarehouseController();
+        warehouse = warehouseController.create("warehouse");
         refController = new OrderController();
         controller = new NewOrderController();
         districtController = new DistrictController();
-        dis = districtController.create("dis");
+        dis = districtController.create("dis",warehouse.getID());
         customerController = new CustomerController();
         cus= customerController.create("name","pw",dis.getID());
         ref1 =refController.create("ref1",new Date(),cus.getID());

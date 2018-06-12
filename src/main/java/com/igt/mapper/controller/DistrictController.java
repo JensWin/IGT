@@ -18,7 +18,7 @@ public class DistrictController {
 
     District toSet;
 
-    public District update(String name, String id) {
+    public District update(String name, String id, String ref) {
         EntityManagerFactory emf = DatabaseController.emf;
         TransactionManager tm = DatabaseController.getTm();
 
@@ -27,6 +27,7 @@ public class DistrictController {
             toSet.setNAME(name);
             EntityManager em = emf.createEntityManager();
             tm.begin();
+            toSet.setWAREHOUSE(em.find(Warehouse.class, ref));
             em.merge(toSet);
 
             em.flush();
@@ -81,7 +82,7 @@ public class DistrictController {
         return toSet;
     }
 
-    public District create(String name) {
+    public District create(String name, String ref) {
 
         EntityManagerFactory emf = DatabaseController.emf;
         TransactionManager tm = DatabaseController.getTm();
@@ -94,6 +95,7 @@ public class DistrictController {
             EntityManager em = emf.createEntityManager();
             tm.setTransactionTimeout(Config.TRANSACTION_TIMEOUT);
             tm.begin();
+            toSet.setWAREHOUSE(em.find(Warehouse.class, ref));
             em.persist(toSet);
             em.flush();
             em.close();
@@ -161,8 +163,9 @@ public class DistrictController {
 
     @RequestMapping(value="/update", method = RequestMethod.PUT)
     public District updateREST(@RequestParam(value ="name", required = true) String name,
-                              @RequestParam(value ="id", required = true) String id) {
-        return update(name,id);
+                              @RequestParam(value ="id", required = true) String id,
+                               @RequestParam(value ="warehouse", required = true) String ref) {
+        return update(name,id, ref);
     }
 
     @RequestMapping(value="/get/{id}", method = RequestMethod.GET)
@@ -174,9 +177,10 @@ public class DistrictController {
 
     @RequestMapping(value = "/create", method = RequestMethod.GET)
     public @ResponseBody
-    District createREST(@RequestParam(value ="name", required = true) String name) {
+    District createREST(@RequestParam(value ="name", required = true) String name,
+                        @RequestParam(value ="warehouse", required = true) String ref) {
 
-        return create(name);
+        return create(name, ref);
     }
 
     @RequestMapping(value="/delete", method = RequestMethod.DELETE)

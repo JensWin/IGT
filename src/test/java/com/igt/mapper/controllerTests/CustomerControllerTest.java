@@ -20,14 +20,18 @@ public class CustomerControllerTest {
     private DistrictController refController ;
     private CustomerController controller;
     private District ref;
+    private WarehouseController warehouseController;
+    private Warehouse warehouse;
 
 
     @Before
     public void before(){
         Database.changeDB();
+        warehouseController = new WarehouseController();
+        warehouse = warehouseController.create("warehouse");
         refController = new DistrictController();
         controller = new CustomerController();
-        ref =refController.create("ref");
+        ref =refController.create("ref",warehouse.getID());
     }
 
     @Test

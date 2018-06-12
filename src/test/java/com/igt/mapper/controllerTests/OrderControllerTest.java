@@ -26,13 +26,17 @@ public class OrderControllerTest {
     private District dis;
     private CustomerController customerController;
     private Customer ref;
+    private WarehouseController warehouseController;
+    private Warehouse warehouse;
 
     @Before
     public void before(){
         Database.changeDB();
+        warehouseController = new WarehouseController();
+        warehouse = warehouseController.create("warehouse");
         districtController = new DistrictController();
         customerController = new CustomerController();
-        dis = districtController.create("dis");
+        dis = districtController.create("dis",warehouse.getID());
         ref = customerController.create("cus","pw",dis.getID());
         controller = new OrderController();
 

@@ -1,0 +1,41 @@
+{
+  "Befehle": {
+    "db":"mysql, postgres,mongodb, neo4j, infinispan, cassandra, redis",
+    "create":"erstellt eine Ressource mit den Attributen",
+    "get":"man erhält die Ressource mit der entsprechenden ID",
+    "update":"man aktualisiert die Ressource mit der übergebenen ID und den Atrributen",
+    "delete":"löscht die Ressource mit der übergebenen ID",
+    "Ressources":{
+      "Info":"Alle Ressourcen haben einen generierten String Key \"id\"",
+      "district":{
+        "name":"String"
+      },
+      "warehouse":{
+        "name":"String",
+        "district":"district"
+      },
+      "item":{
+        "name":"String",
+        "stock":"int",
+        "district":"district"
+      },
+      "customer":{
+        "name":"String",
+        "pw":"String",
+        "district":"district"
+      },
+      "order":{
+        "name":"String",
+        "date":"Date",
+        "customer":"customer"
+      },
+      "orderline":{
+        "order":"order",
+        "item":"item"
+      },
+      "neworder":{
+        "order":"order"
+      }
+    }
+  }
+}

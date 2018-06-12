@@ -33,6 +33,15 @@ public class District implements Serializable {
         this.D_NAME = D_NAME;
     }
 
+    @ManyToOne
+    @JoinColumn(name="W_ID")
+    private Warehouse D_WAREHOUSE;
+    public Warehouse getWAREHOUSE() {
+        return D_WAREHOUSE;
+    }
+    public void setWAREHOUSE(Warehouse D_WAREHOUSE) {
+        this.D_WAREHOUSE = D_WAREHOUSE;
+    }
 
     public District(){ }
 }

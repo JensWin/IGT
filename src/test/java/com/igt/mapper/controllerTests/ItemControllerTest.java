@@ -21,8 +21,6 @@ public class ItemControllerTest {
     private static Logger log = Logger.getAnonymousLogger();
     private WarehouseController refController ;
     private ItemController controller;
-    private DistrictController districtController;
-    private District dis;
     private Warehouse ref;
 
     @Before
@@ -30,9 +28,7 @@ public class ItemControllerTest {
         Database.changeDB();
         refController = new WarehouseController();
         controller = new ItemController();
-        districtController = new DistrictController();
-        dis = districtController.create("dis");
-        ref =refController.create("ref",dis.getID());
+        ref =refController.create("ref");
     }
 
     @Test

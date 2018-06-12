@@ -1,0 +1,9 @@
+com/igt/mapper/controllerTests/OrderLineControllerTest.class
+com/igt/mapper/MapperApplicationTests.class
+com/igt/mapper/controllerTests/WarehouseControllerTest.class
+com/igt/mapper/controllerTests/CustomerControllerTest.class
+com/igt/mapper/controllerTests/OrderControllerTest.class
+com/igt/mapper/controllerTests/NewOrderControllerTest.class
+com/igt/mapper/controllerTests/ItemControllerTest.class
+com/igt/mapper/controllerTests/DistrictControllerTest.class
+com/igt/mapper/controllerTests/Database.class

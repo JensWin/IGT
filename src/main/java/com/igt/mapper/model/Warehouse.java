@@ -31,15 +31,6 @@ public class Warehouse implements Serializable {
         this.W_NAME = W_NAME;
     }
 
-    @ManyToOne
-    @JoinColumn(name="D_ID")
-    private District W_DISTRICT;
-    public District getDISTRICT() {
-        return W_DISTRICT;
-    }
-    public void setDISTRICT(District W_DISTRICT) {
-        this.W_DISTRICT = W_DISTRICT;
-    }
 
 
     public Warehouse(){ }
