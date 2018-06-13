@@ -33,15 +33,15 @@ public class ItemControllerTest {
 
     @Test
     public void update() {
-        Item before =controller.create("before",420, ref.getID());
-        Item after = controller.update("update",420,before.getID(),ref.getID());
+        Item before =controller.create("before","420", ref.getID());
+        Item after = controller.update("update","420",before.getID(),ref.getID());
         assertTrue(after.getNAME().equals("update"));
 
     }
 
     @Test
     public void get() {
-        Item before =controller.create("get",420,ref.getID());
+        Item before =controller.create("get","420",ref.getID());
         Item after = controller.get(before.getID());
         assertTrue(after.getNAME().equals("get"));
 
@@ -49,13 +49,13 @@ public class ItemControllerTest {
 
     @Test
     public void create() {
-        Item before =controller.create("create",420, ref.getID());
+        Item before =controller.create("create","420", ref.getID());
         assertTrue(before.getNAME().equals("create"));
     }
 
     @Test
     public void delete() {
-        Item before =controller.create("delete",420, ref.getID());
+        Item before =controller.create("delete","420", ref.getID());
         assertTrue(controller.delete(before.getID())&& controller.get(before.getID())==null);
     }
 

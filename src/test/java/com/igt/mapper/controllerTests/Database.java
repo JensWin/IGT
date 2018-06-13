@@ -6,7 +6,7 @@ import com.igt.mapper.DatabaseController;
 public class Database {
 
 
-    public static String db = Config.PERSISTENCE_UNITS.OGM_REDIS.name();
+    public static String db = Config.PERSISTENCE_UNITS.OGM_INFINISPAN.name();
 
     public static void changeDB(){
         if(!db.equals(Config.PERSISTENCE_UNIT_NAME)) {

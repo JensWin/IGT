@@ -20,14 +20,13 @@ public class OrderController {
 
     Order toSet;
 
-    public Order update(String name, Date date, String id, String ref) {
+    public Order update(String name, String id, String ref) {
         EntityManagerFactory emf = DatabaseController.emf;
         TransactionManager tm = DatabaseController.getTm();
 
         try {
             toSet = get(id);
             toSet.setNAME(name);
-            toSet.setDate(date);
             EntityManager em = emf.createEntityManager();
             tm.begin();
             toSet.setCUSTOMER(em.find(Customer.class, ref));
@@ -85,14 +84,13 @@ public class OrderController {
         return toSet;
     }
 
-    public Order create(String name, Date date, String ref) {
+    public Order create(String name, String ref) {
 
         EntityManagerFactory emf = DatabaseController.emf;
         TransactionManager tm = DatabaseController.getTm();
 
         toSet = new Order();
         toSet.setNAME(name);
-        toSet.setDate(date);
 
         try {
 
@@ -166,9 +164,8 @@ public class OrderController {
     @RequestMapping(value="/update", method = RequestMethod.PUT)
     public Order updateREST(@RequestParam(value ="name", required = true) String name,
                            @RequestParam(value ="id", required = true) String id,
-                           @RequestParam(value ="date", required = true) Date date,
                            @RequestParam(value ="customer", required = true) String ref) {
-        return update(name,date,id,ref);
+        return update(name,id,ref);
     }
 
     @RequestMapping(value="/get/{id}", method = RequestMethod.GET)
@@ -181,10 +178,9 @@ public class OrderController {
     @RequestMapping(value = "/create", method = RequestMethod.GET)
     public @ResponseBody
     Order createREST(@RequestParam(value ="name", required = true) String name,
-                    @RequestParam(value ="customer", required = true) String ref,
-                    @RequestParam(value ="date", required = true) Date date) {
+                    @RequestParam(value ="customer", required = true) String ref) {
 
-        return create(name,date,ref);
+        return create(name,ref);
     }
 
     @RequestMapping(value="/delete", method = RequestMethod.DELETE)

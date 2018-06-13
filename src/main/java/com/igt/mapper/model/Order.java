@@ -30,13 +30,6 @@ public class Order implements Serializable {
         this.O_NAME = O_NAME;
     }
 
-    private Date O_Date;
-    public Date getDate() {
-        return O_Date;
-    }
-    public void setDate(Date O_Date) {
-        this.O_Date = O_Date;
-    }
 
     @ManyToOne
     @JoinColumn(name="C_ID")

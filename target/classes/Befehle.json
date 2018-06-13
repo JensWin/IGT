@@ -17,7 +17,7 @@
       "item":{
         "name":"String",
         "stock":"int",
-        "district":"district"
+        "warehouse":"warehouse"
       },
       "customer":{
         "name":"String",

@@ -21,7 +21,6 @@ public class OrderControllerTest {
 
     private static Logger log = Logger.getAnonymousLogger();
     private OrderController controller;
-    Date date = new Date();
     private DistrictController districtController;
     private District dis;
     private CustomerController customerController;
@@ -44,15 +43,15 @@ public class OrderControllerTest {
 
     @Test
     public void update() {
-        Order before =controller.create("before",date, ref.getID());
-        Order after = controller.update("update",date,before.getID(),ref.getID());
+        Order before =controller.create("before", ref.getID());
+        Order after = controller.update("update",before.getID(),ref.getID());
         assertTrue(after.getNAME().equals("update"));
 
     }
 
     @Test
     public void get() {
-        Order before =controller.create("get",date,ref.getID());
+        Order before =controller.create("get",ref.getID());
         Order after = controller.get(before.getID());
         assertTrue(after.getNAME().equals("get"));
 
@@ -60,13 +59,13 @@ public class OrderControllerTest {
 
     @Test
     public void create() {
-        Order before =controller.create("create",date, ref.getID());
+        Order before =controller.create("create", ref.getID());
         assertTrue(before.getNAME().equals("create"));
     }
 
     @Test
     public void delete() {
-        Order before =controller.create("delete",date, ref.getID());
+        Order before =controller.create("delete", ref.getID());
         assertTrue(controller.delete(before.getID())&& controller.get(before.getID())==null);
     }
 

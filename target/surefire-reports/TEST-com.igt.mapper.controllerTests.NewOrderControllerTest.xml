@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.igt.mapper.controllerTests.NewOrderControllerTest" time="3.629" tests="4" errors="0" skipped="0" failures="0">
+<testsuite name="com.igt.mapper.controllerTests.NewOrderControllerTest" time="2.247" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="idea.version" value="2018.1.3"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -60,8 +60,8 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="create" classname="com.igt.mapper.controllerTests.NewOrderControllerTest" time="0.402"/>
-  <testcase name="delete" classname="com.igt.mapper.controllerTests.NewOrderControllerTest" time="1.72"/>
-  <testcase name="update" classname="com.igt.mapper.controllerTests.NewOrderControllerTest" time="0.951"/>
-  <testcase name="get" classname="com.igt.mapper.controllerTests.NewOrderControllerTest" time="0.556"/>
+  <testcase name="create" classname="com.igt.mapper.controllerTests.NewOrderControllerTest" time="0.816"/>
+  <testcase name="delete" classname="com.igt.mapper.controllerTests.NewOrderControllerTest" time="0.508"/>
+  <testcase name="update" classname="com.igt.mapper.controllerTests.NewOrderControllerTest" time="0.58"/>
+  <testcase name="get" classname="com.igt.mapper.controllerTests.NewOrderControllerTest" time="0.343"/>
 </testsuite>

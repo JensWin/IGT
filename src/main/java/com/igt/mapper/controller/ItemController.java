@@ -18,14 +18,14 @@ public class ItemController {
 
     Item toSet;
 
-    public Item update(String name,int stock, String id, String ref) {
+    public Item update(String name,String stock, String id, String ref) {
         EntityManagerFactory emf = DatabaseController.emf;
         TransactionManager tm = DatabaseController.getTm();
 
         try {
             toSet = get(id);
             toSet.setNAME(name);
-            toSet.setSTOCK(stock);
+            toSet.setSTOCK(Integer.parseInt(stock));
             EntityManager em = emf.createEntityManager();
             tm.begin();
             toSet.setWAREHOUSE(em.find(Warehouse.class, ref));
@@ -83,14 +83,14 @@ public class ItemController {
         return toSet;
     }
 
-    public Item create(String name, int stock, String ref) {
+    public Item create(String name, String stock, String ref) {
 
         EntityManagerFactory emf = DatabaseController.emf;
         TransactionManager tm = DatabaseController.getTm();
 
         toSet = new Item();
         toSet.setNAME(name);
-        toSet.setSTOCK(stock);
+        toSet.setSTOCK(Integer.parseInt(stock));
 
         try {
 
@@ -164,7 +164,7 @@ public class ItemController {
     @RequestMapping(value="/update", method = RequestMethod.PUT)
     public Item updateREST(@RequestParam(value ="name", required = true) String name,
                            @RequestParam(value ="id", required = true) String id,
-                           @RequestParam(value ="stock", required = true) int stock,
+                           @RequestParam(value ="stock", required = true) String stock,
                            @RequestParam(value ="warehouse", required = true) String ref) {
         return update(name,stock,id,ref);
     }
@@ -180,7 +180,7 @@ public class ItemController {
     public @ResponseBody
     Item createREST(@RequestParam(value ="name", required = true) String name,
                     @RequestParam(value ="warehouse", required = true) String ref,
-                    @RequestParam(value ="stock", required = true) int stock) {
+                    @RequestParam(value ="stock", required = true) String stock) {
 
         return create(name,stock,ref);
     }

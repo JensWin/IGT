@@ -40,8 +40,8 @@ public class NewOrderControllerTest {
         dis = districtController.create("dis",warehouse.getID());
         customerController = new CustomerController();
         cus= customerController.create("name","pw",dis.getID());
-        ref1 =refController.create("ref1",new Date(),cus.getID());
-        ref2 =refController.create("ref2",new Date(),cus.getID());
+        ref1 =refController.create("ref1",cus.getID());
+        ref2 =refController.create("ref2",cus.getID());
     }
 
     @Test

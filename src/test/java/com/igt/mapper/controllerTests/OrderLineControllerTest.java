@@ -41,10 +41,10 @@ public class OrderLineControllerTest {
         dis = districtController.create("dis",war.getID());
         cus = customerController.create("cus","pw",dis.getID());
 
-        order1 =refController1.create("order1",new Date(),cus.getID());
-        order2 =refController1.create("order2",new Date(),cus.getID());
-        item1 = refController2.create("item1",12,war.getID());
-        item2 = refController2.create("item2",12,war.getID());
+        order1 =refController1.create("order1",cus.getID());
+        order2 =refController1.create("order2",cus.getID());
+        item1 = refController2.create("item1","12",war.getID());
+        item2 = refController2.create("item2","12",war.getID());
 
     }
 
